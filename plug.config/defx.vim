@@ -43,7 +43,7 @@ function! s:defx_my_settings() abort
 		
 		"
 		nnoremap <silent><buffer><expr> o defx#do_action('multi',[['drop','split']])
-		
+		nnoremap <silent><buffer><expr> i defx#do_action('mulit',['drop'])
 		" 
 		nnoremap <silent><buffer><expr> s defx#do_action('toggle_select')
 		nnoremap <silent><buffer><expr> n defx#do_action('multi', ['new_multiple_files'])
