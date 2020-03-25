@@ -40,14 +40,14 @@ call plug#begin()
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
-Plug 'kristijanhusak/defx-icons'
+" Plug 'kristijanhusak/defx-icons'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align'
 
 " 文件模糊查询插件
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 " 插件结束
 call plug#end()
