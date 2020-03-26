@@ -2,6 +2,7 @@
 set number
 
 " 显示语法
+syntax enable
 set syntax=on
 
 " 
@@ -34,13 +35,28 @@ set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 " 设置背景
 set bg=light
 
+" 退出插入模式和命令模式 自动切换输入法
+let g:input_toggle = 1
+function! Fcitx2en() 
+		let s:input_status = system('fcitx-remote')
+		if s:input_status == 2
+				let g:input_toggle = 1
+				let l:a = system('fcitx-remote -c')
+		endif
+endfunction
+
+" 设置
+set ttimeoutlen=150
+
+autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
+
 " 插件开始
 call plug#begin()
 
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
-" Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-icons'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align'
