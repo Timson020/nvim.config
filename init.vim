@@ -24,7 +24,7 @@ set autoindent
 set smartindent
 
 " 显示当前行
-" set cursorline
+set cursorline
 
 " 显示文件的百分比
 set ruler
