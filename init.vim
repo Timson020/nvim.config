@@ -48,7 +48,7 @@ endfunction
 " 设置
 set ttimeoutlen=150
 
-autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
+" autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
 
 " 插件开始
 call plug#begin()
@@ -60,6 +60,9 @@ Plug 'kristijanhusak/defx-icons'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align'
+
+" javascript语法检测
+Plug 'jelera/vim-javascript-syntax'
 
 " 文件模糊查询插件
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
