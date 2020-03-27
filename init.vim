@@ -48,7 +48,7 @@ endfunction
 " 设置
 set ttimeoutlen=150
 
-autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
+" autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
 
 " 插件开始
 call plug#begin()
