@@ -61,8 +61,17 @@ Plug 'kristijanhusak/defx-icons'
 " 对齐插件
 Plug 'junegunn/vim-easy-align'
 
+" 前端语法检测
 " javascript语法检测
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jelera/vim-javascript-syntax'
+" html语法检测
+Plug 'othree/html5-syntax.vim'
+" Less语法检测
+Plug 'groenewege/vim-less'
+" 支持css/sass/less/html颜色显示
+Plug 'gko/vim-coloresque'
 
 " 文件模糊查询插件
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
