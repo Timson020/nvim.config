@@ -51,6 +51,9 @@ function! s:defx_my_settings() abort
 		nnoremap <silent><buffer><expr> n defx#do_action('multi', ['new_multiple_files'])
 		nnoremap <silent><buffer><expr> d defx#do_action('remove')
 		nnoremap <silent><buffer><expr> r defx#do_action('rename')
+		nnoremap <silent><buffer><expr> C defx#do_action('copy')
+		nnoremap <silent><buffer><expr> p defx#do_action('paste')
+		nnoremap <silent><buffer><expr> m defx#do_action('move')
 
 		nnoremap <silent><buffer><expr> q defx#do_action('quit')
 endfunction
