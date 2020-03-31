@@ -36,19 +36,29 @@ set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 set bg=light
 
 " 退出插入模式和命令模式 自动切换输入法
+" 设置执行时间
+set ttimeoutlen=150
 let g:input_toggle = 1
 function! Fcitx2en() 
 		let s:input_status = system('fcitx-remote')
 		if s:input_status == 2
-				let g:input_toggle = 1
-				let l:a = system('fcitx-remote -c')
+			let g:input_toggle = 1
+			" 先不要解开，会导致报错
+			" let l:a = system('fcitx-remote -c')
 		endif
 endfunction
 
-" 设置
-set ttimeoutlen=150
+autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
 
-" autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
+" manual // 手工定义折叠
+" indent // 用缩进表示折叠
+" expr　 // 用表达式来定义折叠
+" jsyntax // 用语法高亮来定义折叠
+" diff // 对没有更改的文本进行折叠
+" marker // 用标志折叠
+set foldmethod=indent
+
+set foldlevel=1
 
 " 插件开始
 call plug#begin()
@@ -62,7 +72,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'junegunn/vim-easy-align'
 
 " 前端语法检测
-" javascript语法检测
+" javascript语法支持
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jelera/vim-javascript-syntax'
@@ -72,6 +82,11 @@ Plug 'othree/html5-syntax.vim'
 Plug 'groenewege/vim-less'
 " 支持css/sass/less/html颜色显示
 Plug 'gko/vim-coloresque'
+
+" 语法检测
+Plug 'vim-syntastic/syntastic'
+" 自动化格式
+Plug 'Chiel92/vim-autoformat'
 
 " 文件模糊查询插件
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
