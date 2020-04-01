@@ -8,7 +8,7 @@ set syntax=on
 " 
 set shiftwidth=2
 
-" 
+" 缩进
 set tabstop=2
 
 " 设置编码
@@ -37,18 +37,17 @@ set bg=light
 
 " 退出插入模式和命令模式 自动切换输入法
 " 设置执行时间
-set ttimeoutlen=150
-let g:input_toggle = 1
-function! Fcitx2en() 
-		let s:input_status = system('fcitx-remote')
-		if s:input_status == 2
-			let g:input_toggle = 1
+" set ttimeoutlen=150
+" let g:input_toggle = 1
+" function! Fcitx2en() 
+		" let s:input_status = system('fcitx-remote')
+		" if s:input_status == 2
+			" let g:input_toggle = 1
 			" 先不要解开，会导致报错
 			" let l:a = system('fcitx-remote -c')
-		endif
-endfunction
-
-autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
+		" endif
+" endfunction
+" autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
 
 " manual // 手工定义折叠
 " indent // 用缩进表示折叠
@@ -58,6 +57,7 @@ autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
 " marker // 用标志折叠
 set foldmethod=indent
 
+" 折叠的层级
 set foldlevel=1
 
 " 插件开始
@@ -67,6 +67,10 @@ call plug#begin()
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 Plug 'kristijanhusak/defx-icons'
+
+" 文件搜索插件
+" Plug 'wincent/command-t'
+Plug 'kien/ctrlp.vim'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align'
@@ -80,6 +84,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/html5-syntax.vim'
 " Less语法检测
 Plug 'groenewege/vim-less'
+
 " 支持css/sass/less/html颜色显示
 Plug 'gko/vim-coloresque'
 
@@ -87,10 +92,6 @@ Plug 'gko/vim-coloresque'
 Plug 'vim-syntastic/syntastic'
 " 自动化格式
 Plug 'Chiel92/vim-autoformat'
-
-" 文件模糊查询插件
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
 
 " 插件结束
 call plug#end()
