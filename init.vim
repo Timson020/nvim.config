@@ -1,6 +1,9 @@
 " 显示行数
 set number
 
+" 设置主体
+colorscheme solarized8_low
+
 " 显示语法
 syntax enable
 set syntax=on
@@ -32,9 +35,6 @@ set ruler
 " 突出显示tab space
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
-" 设置背景
-set bg=light
-
 " 退出插入模式和命令模式 自动切换输入法
 " 设置执行时间
 " set ttimeoutlen=150
@@ -60,36 +60,69 @@ set foldmethod=indent
 " 折叠的层级
 set foldlevel=1
 
+" 开启24色号
+" Enables 24-bit RGB color in the TUI
+if has('termguicolors')
+	set termguicolors
+endif
+
+if has('mac')
+	let g:clipboard = {
+		\   'name': 'macOS-clipboard',
+		\   'copy': {
+		\      '+': 'pbcopy',
+		\      '*': 'pbcopy',
+		\    },
+		\   'paste': {
+		\      '+': 'pbpaste',
+		\      '*': 'pbpaste',
+		\   },
+		\   'cache_enabled': 0,
+		\ }
+endif
+if has('clipboard')
+	set clipboard& clipboard+=unnamedplus
+endif
+
 " 插件开始
 call plug#begin()
+
+" 开始页面
+Plug 'mhinz/vim-startify'
+
+" 美化界面
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
 
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 Plug 'kristijanhusak/defx-icons'
 
+Plug 'airblade/vim-gitgutter'
+
 " 文件搜索插件
 " Plug 'wincent/command-t'
 Plug 'kien/ctrlp.vim'
 
 " 对齐插件
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
 " 前端语法检测
 " javascript语法支持
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript', { 'for': [ 'js', 'jsx' ] }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'js', 'jsx' ] }
 Plug 'jelera/vim-javascript-syntax'
 " html语法检测
 Plug 'othree/html5-syntax.vim'
 " Less语法检测
-Plug 'groenewege/vim-less'
+Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 
 " 支持css/sass/less/html颜色显示
 Plug 'gko/vim-coloresque'
 
 " 语法检测
-Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic', { 'for': [ 'js', 'jsx' ] }
 " 自动化格式
 Plug 'Chiel92/vim-autoformat'
 
@@ -101,6 +134,6 @@ exe 'source ~/.config/nvim/map.vim'
 
 " 加载插件的配置文件
 for s:path in split(glob('~/.config/nvim/plug.config/*.vim'), "\n")
-  exe 'source ' . s:path
+	exe 'source ' . s:path
 endfor
 
