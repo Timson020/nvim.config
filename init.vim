@@ -35,20 +35,6 @@ set ruler
 " 突出显示tab space
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
-" 退出插入模式和命令模式 自动切换输入法
-" 设置执行时间
-" set ttimeoutlen=150
-" let g:input_toggle = 1
-" function! Fcitx2en() 
-		" let s:input_status = system('fcitx-remote')
-		" if s:input_status == 2
-			" let g:input_toggle = 1
-			" 先不要解开，会导致报错
-			" let l:a = system('fcitx-remote -c')
-		" endif
-" endfunction
-" autocmd InsertLeave,CmdLineLeave * call Fcitx2en()
-
 " manual // 手工定义折叠
 " indent // 用缩进表示折叠
 " expr　 // 用表达式来定义折叠
@@ -60,30 +46,6 @@ set foldmethod=indent
 " 折叠的层级
 set foldlevel=1
 
-" 开启24色号
-" Enables 24-bit RGB color in the TUI
-if has('termguicolors')
-	set termguicolors
-endif
-
-if has('mac')
-	let g:clipboard = {
-		\   'name': 'macOS-clipboard',
-		\   'copy': {
-		\      '+': 'pbcopy',
-		\      '*': 'pbcopy',
-		\    },
-		\   'paste': {
-		\      '+': 'pbpaste',
-		\      '*': 'pbpaste',
-		\   },
-		\   'cache_enabled': 0,
-		\ }
-endif
-if has('clipboard')
-	set clipboard& clipboard+=unnamedplus
-endif
-
 " 插件开始
 call plug#begin()
 
@@ -93,6 +55,7 @@ Plug 'mhinz/vim-startify'
 " 美化界面
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -129,11 +92,13 @@ Plug 'Chiel92/vim-autoformat'
 " 插件结束
 call plug#end()
 
-" 设置重新设置的键位
-exe 'source ~/.config/nvim/map.vim'
+" 设置实用工具
+for s:path in split(glob('~/.config/nvim/common/*.vim'), '\n')
+	exe 'source ' . s:path
+endfor
 
 " 加载插件的配置文件
-for s:path in split(glob('~/.config/nvim/plug.config/*.vim'), "\n")
+for s:path in split(glob('~/.config/nvim/plug.config/*.vim'), '\n')
 	exe 'source ' . s:path
 endfor
 
