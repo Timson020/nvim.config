@@ -1,6 +1,9 @@
 " 显示行数
 set number
 
+" 显示相对行号
+set relativenumber
+
 " 设置主体
 colorscheme solarized8_low
 
