@@ -4,6 +4,10 @@
 欢迎大神们指导，给小弟提提建议
 持续完善
 
+## ScreenShot
+![screenshot](./screenshot/main.gif)
+![screenshot](https://github.com/Timson020/nvim.config/tree/master/screenshot/main.gif)
+
 ## 安装
 
 ### MacOS
