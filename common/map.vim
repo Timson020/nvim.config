@@ -10,3 +10,6 @@ nmap <silent> <LocalLeader>p :CtrlP<cr>
 nmap <silent> <LocalLeader>t :tabnew<cr>
 nmap <silent> <c-t> :tabnew<cr>
 
+" 保存
+nmap <silent> <c-s> :w<cr>
+nmap <silent> save :w<cr>
