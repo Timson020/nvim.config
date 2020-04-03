@@ -6,7 +6,6 @@
 
 ## ScreenShot
 ![screenshot](./screenshot/main.gif)
-![screenshot](https://github.com/Timson020/nvim.config/tree/master/screenshot/main.gif)
 
 ## 安装
 
