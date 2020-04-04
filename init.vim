@@ -74,6 +74,9 @@ Plug 'kien/ctrlp.vim'
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
+" 代码自动补全
+Plug 'valloric/youcompleteme'
+
 " 前端语法检测
 " javascript语法支持
 Plug 'pangloss/vim-javascript', { 'for': [ 'js', 'jsx' ] }
