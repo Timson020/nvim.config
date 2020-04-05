@@ -49,7 +49,7 @@ set foldmethod=indent
 " 折叠的层级
 set foldlevel=1
 
-" 插件开始
+" TODO 插件开始
 call plug#begin()
 
 " 开始页面
@@ -77,28 +77,29 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 " 代码自动补全
 Plug 'valloric/youcompleteme'
 
-" 前端语法检测
-" javascript语法支持
-Plug 'pangloss/vim-javascript', { 'for': [ 'js', 'jsx' ] }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'js', 'jsx' ] }
-Plug 'jelera/vim-javascript-syntax'
-" html语法检测
-Plug 'othree/html5-syntax.vim'
-" Less语法检测
-Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
-
 " 支持css/sass/less/html颜色显示
 Plug 'gko/vim-coloresque'
 
-" 语法检测
-Plug 'vim-syntastic/syntastic', { 'for': [ 'js', 'jsx' ] }
-" 自动化格式
-Plug 'Chiel92/vim-autoformat'
+" JavaScript语法检测
+" Plug 'pangloss/vim-javascript', { 'for': [ 'js', 'jsx' ] }
+" Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'js', 'jsx' ] }
+" Plug 'jelera/vim-javascript-syntax'
+" html语法检测
+" Plug 'othree/html5-syntax.vim'
+" Less语法检测
+" Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
+" Sass语法检测
+" Plug '', { 'for': [ 'sass', 'scss' ] }
 
-" 插件结束
+" 语法检测
+" Plug 'vim-syntastic/syntastic', { 'for': [ 'js', 'jsx' ] }
+" 自动化格式
+" Plug 'Chiel92/vim-autoformat'
+
+" TODO 插件结束
 call plug#end()
 
-" 设置实用工具
+" COMMON 设置实用工具
 for s:path in split(glob('~/.config/nvim/common/*.vim'), '\n')
 	exe 'source ' . s:path
 endfor
