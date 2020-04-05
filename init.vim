@@ -79,7 +79,7 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'valloric/youcompleteme'
 
 " 支持css/sass/less/html颜色显示
-Plug 'gko/vim-coloresque'
+Plug 'ap/vim-css-color'
 
 " JavaScript语法检测
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'react' ] }
