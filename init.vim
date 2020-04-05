@@ -6,6 +6,7 @@ set relativenumber
 
 " 设置主体
 colorscheme solarized8_low
+set bg=dark
 
 " 显示语法
 syntax enable
