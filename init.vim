@@ -68,8 +68,9 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'airblade/vim-gitgutter'
 
 " 文件搜索插件
-" Plug 'wincent/command-t'
 Plug 'kien/ctrlp.vim'
+" Plug 'wincent/command-t'
+
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
@@ -81,20 +82,21 @@ Plug 'valloric/youcompleteme'
 Plug 'gko/vim-coloresque'
 
 " JavaScript语法检测
-" Plug 'pangloss/vim-javascript', { 'for': [ 'js', 'jsx' ] }
-" Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'js', 'jsx' ] }
-" Plug 'jelera/vim-javascript-syntax'
+Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'react' ] }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'react' ] }
+Plug 'jelera/vim-javascript-syntax', { 'for': [ 'javascript', 'react' ] }
+
 " html语法检测
 " Plug 'othree/html5-syntax.vim'
-" Less语法检测
-" Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
-" Sass语法检测
-" Plug '', { 'for': [ 'sass', 'scss' ] }
 
-" 语法检测
-" Plug 'vim-syntastic/syntastic', { 'for': [ 'js', 'jsx' ] }
-" 自动化格式
-" Plug 'Chiel92/vim-autoformat'
+" Less语法检测
+Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
+
+" Sass语法检测
+Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass' ] }
+
+" 语法检测 (确保eslint 已经全局安装)
+Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'react' ] }
 
 " TODO 插件结束
 call plug#end()
