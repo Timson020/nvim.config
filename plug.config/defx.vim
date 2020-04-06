@@ -40,7 +40,7 @@ function! s:defx_my_settings() abort
 		" 
 		nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
 		nnoremap <silent><buffer><expr> e defx#do_action('open_or_close_tree')
-		nnoremap <silent><buffer><expr> <C-r> defx#do_action('redraw')
+		nnoremap <silent><buffer><expr> <c-r> defx#do_action('redraw')
 		"
 		nnoremap <silent><buffer><expr> o defx#do_action('multi',[['drop','split']])
 		nnoremap <silent><buffer><expr> i defx#do_action('multi',['drop'])
