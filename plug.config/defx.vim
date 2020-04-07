@@ -36,15 +36,18 @@ call defx#custom#column('git', 'indicators', {
 
 " Function for Defx
 autocmd FileType defx call s:defx_my_settings()
+
 function! s:defx_my_settings() abort
-		" 
+		" 目录树
 		nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
 		nnoremap <silent><buffer><expr> e defx#do_action('open_or_close_tree')
 		nnoremap <silent><buffer><expr> <c-r> defx#do_action('redraw')
-		"
+
+		" 打开文件
 		nnoremap <silent><buffer><expr> o defx#do_action('multi',[['drop','split']])
 		nnoremap <silent><buffer><expr> i defx#do_action('multi',['drop'])
-		" 
+
+		" 文件操作
 		nnoremap <silent><buffer><expr> s defx#do_action('toggle_select')
 		nnoremap <silent><buffer><expr> n defx#do_action('multi', ['new_multiple_files'])
 		nnoremap <silent><buffer><expr> dd defx#do_action('remove')
