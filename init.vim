@@ -63,8 +63,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'kristijanhusak/defx-git'
 Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 
 Plug 'airblade/vim-gitgutter'
 

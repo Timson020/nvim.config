@@ -4,31 +4,32 @@
 " 自定义设置
 call defx#custom#option('_', {
 		\ 'columns': 'icons:indent:git:mark:filename:type',
-		\ 'winwidth': 40,
+		\ 'winwidth': 60,
 		\ 'split': 'vertical',
 		\ 'direction': 'topleft',
 		\ 'show_ignored_files': 0,
 		\ 'buffer_name': 'File System',
+		\ 'root_marker': 'Root: ',
 		\ 'toggle': 1,
 		\ 'resume': 1
 		\ })
 "
-call defx#custom#column('icon', {
-		\'directory_icon': '▸',
-		\'opened_icon': '▾',
-		\'root_icon': '$',
-		\ })
+" call defx#custom#column('icon', {
+" 		\'directory_icon': '▸',
+" 		\'opened_icon': '▾',
+" 		\'root_icon': '$',
+" 		\ })
 
-call defx#custom#column('git', 'indicators', {
-		\ 'Modified'  : '✹',
-		\ 'Staged'    : '✚',
-		\ 'Untracked' : '✭',
-		\ 'Renamed'   : '➜',
-		\ 'Unmerged'  : '═',
-		\ 'Ignored'   : '☒',
-		\ 'Deleted'   : '✖',
-		\ 'Unknown'   : '?'
-		\ })
+" call defx#custom#column('git', 'indicators', {
+" 		\ 'Modified'  : '✹',
+" 		\ 'Staged'    : '✚',
+" 		\ 'Untracked' : '✭',
+" 		\ 'Renamed'   : '➜',
+" 		\ 'Unmerged'  : '═',
+" 		\ 'Ignored'   : '☒',
+" 		\ 'Deleted'   : '✖',
+" 		\ 'Unknown'   : '?'
+" 		\ })
 
 
 " 设置快捷键
