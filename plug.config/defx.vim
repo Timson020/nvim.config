@@ -1,18 +1,24 @@
+let g:defx_icons_column_length = 2
+
 " Defx
 " Config
 
 " 自定义设置
 call defx#custom#option('_', {
-		\ 'columns': 'icons:indent:git:mark:filename:type',
+		\ 'columns': 'indent:icons:indent:git:mark:filename:type',
 		\ 'winwidth': 60,
 		\ 'split': 'vertical',
 		\ 'direction': 'topleft',
 		\ 'show_ignored_files': 0,
 		\ 'buffer_name': 'File System',
-		\ 'root_marker': 'Root: ',
+		\ 'root_marker': ': ',
 		\ 'toggle': 1,
 		\ 'resume': 1
 		\ })
+
+" 
+call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': '' })
+
 "
 " call defx#custom#column('icon', {
 " 		\'directory_icon': '▸',
@@ -20,6 +26,7 @@ call defx#custom#option('_', {
 " 		\'root_icon': '$',
 " 		\ })
 
+" 
 " call defx#custom#column('git', 'indicators', {
 " 		\ 'Modified'  : '✹',
 " 		\ 'Staged'    : '✚',
