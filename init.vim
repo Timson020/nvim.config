@@ -39,6 +39,9 @@ set ruler
 " 突出显示tab space
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
+" 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+
 " manual // 手工定义折叠
 " indent // 用缩进表示折叠
 " expr　 // 用表达式来定义折叠
