@@ -81,6 +81,8 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
 " 代码自动补全
 Plug 'valloric/youcompleteme'
+" javascript until and thiry part for autocomplete
+Plug 'ternjs/tern_for_vim'
 
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'
