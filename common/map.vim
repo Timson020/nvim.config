@@ -10,6 +10,8 @@ nmap <silent> <LocalLeader>b :CtrlPBuffer<cr>
 " 新开标签页
 nmap <silent> <LocalLeader>t :tabnew<cr>
 nmap <silent> <c-t> :tabnew<cr>
+nmap <silent> <LocalLeader>q :tabnext<cr>
+nmap <silent> <LocalLeader>e :tabprevious<cr>
 
 " 保存
 nmap <silent> <c-s> :w<cr>
