@@ -41,7 +41,7 @@ $ yum install -y neovim python36-neovim
 ## 插件必要依赖
 
 - ctags
-> 方便在vim下代码阅读工具
+> 方便在vim下代码阅读工具(部分插件需要用到)
 ```bash
 $ brew install ctags
 ```
@@ -58,6 +58,13 @@ $ brew install fcitx-remote-for-osx
 $ brew tap homebrew/cask-fonts
 
 $ brew cask install font-hack-nerd-font
+```
+
+- vim-plug安装
+```bash
+$ brew install go cmake
+$ python3 install.py --all --js-completer
+$ cd $VIMCONFIG/plugged/youcomplete/
 ```
 
 ## 使用
@@ -79,10 +86,12 @@ $ nvim ./xx
 
 ## 功能说明
 
-- [x] JavaScript
-- [x] Less,Css
-- [x] JSX
 - [x] File System
 - [x] File System Icon
 - [x] File System Git
 - [x] Fold
+- [x] JavaScript
+- [x] JSX
+- [x] Sass, Less, Css
+
+
