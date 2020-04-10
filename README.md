@@ -43,7 +43,7 @@ $ yum install -y neovim python36-neovim
 - ctags
 > 方便在vim下代码阅读工具(部分插件需要用到)
 ```bash
-$ brew install ctags
+$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
 - Fcitx-remote
