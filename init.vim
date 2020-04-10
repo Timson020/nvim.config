@@ -39,6 +39,9 @@ set ruler
 " 突出显示tab space
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
+" enabled Concealing Characters
+set conceallevel=1
+
 " 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 

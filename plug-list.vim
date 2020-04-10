@@ -37,7 +37,7 @@ Plug 'ap/vim-css-color'
 " JavaScript语法检测
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
-Plug 'jelera/vim-javascript-syntax', { 'for': [ 'javascript', 'javascriptreact' ] }
+" Plug 'jelera/vim-javascript-syntax', { 'for': [ 'javascript', 'javascriptreact' ] }
 
 " html语法检测
 " Plug 'othree/html5-syntax.vim'
