@@ -20,6 +20,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 " Plug 'wincent/command-t'
 
+" 函数 类名 拓展栏
+Plug 'majutsushi/tagbar'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
