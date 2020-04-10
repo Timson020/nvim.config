@@ -18,8 +18,8 @@ let g:tagbar_type_javascript = {
 
 " json
 let g:tagbar_type_json = {
-	\ 'ctagstype' : 'json',
-	\ 'kinds' : [
+	\ 'ctagstype': 'json',
+	\ 'kinds': [
 		\ 'o:objects',
 		\ 'a:arrays',
 		\ 'n:numbers',
@@ -27,7 +27,7 @@ let g:tagbar_type_json = {
 		\ 'b:booleans',
 		\ 'z:nulls'
 	\ ],
-	\ 'sro' : '.',
+	\ 'sro': '.',
 	\ 'scope2kind': {
 		\ 'object': 'o',
 		\ 'array': 'a',
@@ -49,8 +49,8 @@ let g:tagbar_type_json = {
 
 " css
 let g:tagbar_type_css = {
-\ 'ctagstype' : 'Css',
-	\ 'kinds'		 : [
+\ 'ctagstype': 'css',
+	\ 'kinds': [
 		\ 'c:classes',
 		\ 's:selectors',
 		\ 'i:identities'
@@ -59,7 +59,7 @@ let g:tagbar_type_css = {
 
 " markdown
 let g:tagbar_type_markdown = {
-	\ 'ctagstype' : 'markdown',
+	\ 'ctagstype': 'markdown',
 	\ 'kinds' : [
 		\ 'h:Heading_L1',
 		\ 'i:Heading_L2',
@@ -78,3 +78,4 @@ let g:tagbar_type_go = {
 		\'c:const'
 	\]
 \}
+
