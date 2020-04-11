@@ -1,22 +1,22 @@
 let g:tagbar_autofocus=1
 
-" javascipr
-" let g:tagbar_type_javascript = {
-" 	\ 'ctagstype': 'javascript',
-" 	\ 'kinds': [
-" 		\ 'A:arrays',
-" 		\ 'P:properties',
-" 		\ 'T:tags',
-" 		\ 'O:objects',
-" 		\ 'G:generator functions',
-" 		\ 'F:functions',
-" 		\ 'C:constructors/classes',
-" 		\ 'M:methods',
-" 		\ 'V:variables',
-" 		\ 'I:imports',
-" 		\ 'E:exports',
-" 		\ 'S:styled components'
-" \ ]}
+" javascriptreact
+let g:tagbar_type_javascriptreact = {
+	\ 'ctagstype': 'javascript',
+	\ 'kinds': [
+		\ 'A:arrays',
+		\ 'P:properties',
+		\ 'T:tags',
+		\ 'O:objects',
+		\ 'G:generator functions',
+		\ 'F:functions',
+		\ 'C:constructors/classes',
+		\ 'M:methods',
+		\ 'V:variables',
+		\ 'I:imports',
+		\ 'E:exports',
+		\ 'S:styled components'
+\ ]}
 
 " json
 let g:tagbar_type_json = {
@@ -58,6 +58,28 @@ let g:tagbar_type_css = {
 		\ 'i:identities'
 	\ ]
 \ }
+
+" scss
+let g:tagbar_type_scss = {
+	\ 'ctagstype': 'scss',
+	\ 'kinds': [
+		\ 'd:definition',
+		\ 'f:functions',
+		\ 'm:mixins',
+		\ 'v:variables',
+		\ 'c:classes',
+		\ 's:selectors',
+		\ 'i:identities'
+	\ ],
+\ }
+
+" let g:tagbar_type_less = {
+" 	\ 'ctagstype': 'less',
+" 	\ 'kinds': [
+" 		\ 'c:classes',
+" 		\ 's:selectors',
+" 	\ ],
+" \ }
 
 " markdown
 " let g:tagbar_type_markdown = {
