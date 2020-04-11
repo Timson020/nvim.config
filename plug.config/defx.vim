@@ -1,15 +1,13 @@
-let g:defx_icons_column_length = 2
-
 " Defx
 " Config
 
 " 自定义设置
 call defx#custom#option('_', {
-		\ 'columns': 'indent:icons:indent:git:mark:filename:type',
+		\ 'columns': 'space:indent:icons:git:mark:filename:type',
 		\ 'winwidth': 60,
 		\ 'split': 'vertical',
 		\ 'direction': 'topleft',
-		\ 'show_ignored_files': 0,
+		\ 'show_ignored_files': 1,
 		\ 'buffer_name': 'File System',
 		\ 'root_marker': ': ',
 		\ 'toggle': 1,
@@ -50,6 +48,7 @@ function! s:defx_my_settings() abort
 		nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
 		nnoremap <silent><buffer><expr> e defx#do_action('open_or_close_tree')
 		nnoremap <silent><buffer><expr> <c-r> defx#do_action('redraw')
+		nnoremap <silent><buffer><expr> ~ defx#do_action('cd', ['..'])
 
 		" 打开文件
 		nnoremap <silent><buffer><expr> o defx#do_action('multi',[['drop','split']])
@@ -66,12 +65,4 @@ function! s:defx_my_settings() abort
 
 		nnoremap <silent><buffer><expr> q defx#do_action('quit')
 endfunction
-
-"function! s:defx_toggle_tree() abort
-		" Open current file, or toggle directory expand/collapse
-		" if defx#is_directory()
-				" return defx#do_action('open_or_close_tree')
-		" endif
-		" return defx#do_action('multi', ['drop'])
-" endfunction
 
