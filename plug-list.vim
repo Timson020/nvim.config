@@ -34,18 +34,20 @@ Plug 'ternjs/tern_for_vim'
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'
 
-" JavaScript语法检测
+" JavaScript语法高亮
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
-" Plug 'jelera/vim-javascript-syntax', { 'for': [ 'javascript', 'javascriptreact' ] }
+
+" dockerfile语法高亮
+Plug 'ekalinin/dockerfile.vim'
 
 " html语法检测
 " Plug 'othree/html5-syntax.vim'
 
-" Less语法检测
+" Less语法高亮
 Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 
-" Sass语法检测
+" Sass语法高亮
 Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass' ] }
 
 " 语法检测 (确保eslint 已经全局安装)
