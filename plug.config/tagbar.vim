@@ -1,3 +1,5 @@
+let g:tagbar_autofocus=1
+
 " javascipr
 " let g:tagbar_type_javascript = {
 " 	\ 'ctagstype': 'javascript',
