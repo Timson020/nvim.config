@@ -79,7 +79,7 @@ function! FoldText()
 	" let foldPercentage = printf('[%.1f', (foldSize*1.0)/lineCount*100) . '%] '
 	" let expansionString = repeat('.', w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
 
-	return line . '   ➸                 '
+	return line . '   ➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜➜             '
 endfunction
 
 exe 'source ~/.config/nvim/plug-list.vim'
