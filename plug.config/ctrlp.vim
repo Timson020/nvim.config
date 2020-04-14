@@ -1,6 +1,6 @@
 " 搜索时候忽略文件
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](node_modules)$',
+	\ 'dir':  '\v[\/](node_modules|.git)$',
 	\ 'file': '\v\.(exe|so|dll)$',
 	\ }
 
