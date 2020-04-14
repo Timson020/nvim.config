@@ -3,7 +3,7 @@ let g:tagbar_autoclose=1
 
 " javascriptreact
 let g:tagbar_type_javascriptreact = {
-	\ 'ctagstype': 'javascript',
+	\ 'ctagstype': 'javascriptreact',
 	\ 'kinds': [
 		\ 'A:arrays',
 		\ 'P:properties',
@@ -30,7 +30,6 @@ let g:tagbar_type_json = {
 		\ 'b:booleans',
 		\ 'z:nulls'
 	\ ],
-	\ 'sro': '.',
 	\ 'scope2kind': {
 		\ 'object': 'o',
 		\ 'array': 'a',
@@ -47,7 +46,8 @@ let g:tagbar_type_json = {
 		\ 'b': 'boolean',
 		\ 'z': 'null'
 	\ },
-	\ 'sort' : 0
+	\ 'sort' : 0,
+	\ 'sro': '.'
 \ }
 
 " css
