@@ -30,6 +30,7 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'valloric/youcompleteme'
 " javascript until and thiry part for autocomplete
 Plug 'ternjs/tern_for_vim'
+Plug 'dense-analysis/ale'
 
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'

@@ -63,8 +63,8 @@ $ brew cask install font-hack-nerd-font
 - vim-plug安装
 ```bash
 $ brew install go cmake
-$ python3 install.py --all --js-completer
 $ cd $VIMCONFIG/plugged/youcomplete/
+$ python3 install.py --all --js-completer
 ```
 
 ## 使用
