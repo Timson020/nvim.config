@@ -30,7 +30,6 @@ Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 Plug 'valloric/youcompleteme'
 " javascript until and thiry part for autocomplete
 Plug 'ternjs/tern_for_vim'
-Plug 'dense-analysis/ale'
 
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'
@@ -52,7 +51,8 @@ Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass' ] }
 
 " 语法检测 (确保eslint 已经全局安装)
-Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'javascriptreact' ] }
+" Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'javascriptreact' ] }
+Plug 'dense-analysis/ale'
 
 " TODO 插件结束
 call plug#end()
