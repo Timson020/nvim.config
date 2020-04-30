@@ -16,5 +16,9 @@ nmap <silent> <LocalLeader>e :tabprevious<cr>
 " 打开tagbar
 nmap <silent> <LocalLeader>r :TagbarToggle<cr>
 
+" ale查询下一个语法错误
+nmap <silent> <LocalLeader>an :ALENext<cr>
+nmap <silent> <LocalLeader>ap :ALEPrevious<cr>
+
 " 保存
 nmap <silent> <c-s> :w<cr>

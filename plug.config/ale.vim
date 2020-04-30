@@ -1,5 +1,6 @@
 let g:ale_linters = {
 \	'javascript': [ 'eslint' ],
+\	'javascriptreact': [ 'eslint' ],
 \	'python': [ 'pylint' ],
 \	'css': [ 'stylelint' ],
 \}
