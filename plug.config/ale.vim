@@ -5,7 +5,8 @@ let g:ale_linters = {
 \	'css': [ 'stylelint' ],
 \}
 
-let g:ale_fix_on_save = 1
+" 保存的时候修复
+let g:ale_fix_on_save = 0
 
 " 没有申明的 一律不检测
 let g:ale_linters_explicit = 1
