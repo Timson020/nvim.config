@@ -4,6 +4,8 @@ call plug#begin()
 " 开始页面
 Plug 'mhinz/vim-startify'
 
+Plug 'itchyny/vim-cursorword'
+
 " 美化界面
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
