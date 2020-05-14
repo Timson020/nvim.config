@@ -37,7 +37,7 @@ set cursorline
 set ruler
 
 " 突出显示tab space
-set list
+" set list
 " set listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
 " enabled Concealing Characters

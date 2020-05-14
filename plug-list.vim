@@ -10,6 +10,7 @@ Plug 'itchyny/vim-cursorword'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " 文件系统插件
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
