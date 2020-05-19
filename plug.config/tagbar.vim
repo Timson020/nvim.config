@@ -1,6 +1,6 @@
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
-let g:tagbar_width=180
+let g:tagbar_width=60
 
 " javascript
 " let g:tagbar_type_javascript = {
@@ -74,7 +74,7 @@ let g:tagbar_type_json = {
 
 " css
 let g:tagbar_type_css = {
-\ 'ctagstype': 'css',
+	\ 'ctagstype': 'css',
 	\ 'kinds': [
 		\ 'c:classes',
 		\ 's:selectors',
