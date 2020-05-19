@@ -1,5 +1,26 @@
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
+let g:tagbar_width=180
+
+" javascript
+" let g:tagbar_type_javascript = {
+"   \ 'ctagstype': 'javascript',
+"   \ 'kinds': [
+"   	\ 'A:arrays',
+"     \ 'P:properties',
+"     \ 'T:tags',
+"     \ 'O:objects',
+"     \ 'G:generator functions',
+"     \ 'F:functions',
+"     \ 'C:constructors/classes',
+"     \ 'M:methods',
+"     \ 'V:variables',
+"     \ 'I:imports',
+"     \ 'E:exports',
+"     \ 'S:styled components'
+"   \ ],
+" 	\ 'sort' : 0,
+" \ }
 
 " javascriptreact
 let g:tagbar_type_javascriptreact = {
@@ -17,7 +38,8 @@ let g:tagbar_type_javascriptreact = {
 		\ 'I:imports',
 		\ 'E:exports',
 		\ 'S:styled components'
-\ ]}
+	\ ]
+\ }
 
 " json
 let g:tagbar_type_json = {
@@ -71,7 +93,7 @@ let g:tagbar_type_scss = {
 		\ 'c:classes',
 		\ 's:selectors',
 		\ 'i:identities'
-	\ ],
+	\ ]
 \ }
 
 " let g:tagbar_type_less = {
