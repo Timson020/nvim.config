@@ -17,6 +17,7 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 
+" Git
 Plug 'airblade/vim-gitgutter'
 
 " 文件搜索插件
