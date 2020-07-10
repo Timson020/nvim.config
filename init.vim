@@ -27,8 +27,11 @@ set noexpandtab
 " 自动缩进
 set autoindent
 
-" 自动缩进
+" 智能对齐
 set smartindent
+
+" 外部修改后,自动读取
+set autoread
 
 " 显示当前行
 set cursorline
