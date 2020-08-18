@@ -59,3 +59,6 @@ let s:custom_footer_2 = [
 let g:startify_custom_header = s:custom_header
 
 let g:startify_custom_footer = s:custom_footer_2
+
+let g:startify_padding_left = 4
+
