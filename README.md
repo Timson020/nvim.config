@@ -38,7 +38,7 @@ $ yum install -y neovim python36-neovim
 
 - 安装vim-plug插件管理同Mac OS 方法一致
 
-## 插件必要依赖
+### 插件必要依赖，都是必须要的(Mac Linux)
 
 - ctags
 > 方便在vim下代码阅读工具(部分插件需要用到)
@@ -56,7 +56,6 @@ $ brew install fcitx-remote-for-osx
 > defx-icon 显示图标
 ```bash
 $ brew tap homebrew/cask-fonts
-
 $ brew cask install font-hack-nerd-font
 ```
 
@@ -65,6 +64,12 @@ $ brew cask install font-hack-nerd-font
 $ brew install go cmake
 $ cd $VIMCONFIG/plugged/youcomplete/
 $ python3 install.py --all --js-completer
+```
+
+- 安装tean_for_vim node所需要支持的node_modules
+```bash
+$ cd $HOME/.config/nvim/plugged/tern_for_vim
+$ npm i
 ```
 
 ## 使用
@@ -79,19 +84,26 @@ $ nvim ./xx
 ## 结构说明
 
 - init.vim(主要配置文件入口)
+- plug-list(所需要的插件列表)
 
-- map.vim(修改自定义映射键位)
-
+- common(修改自定义映射键位, 其他配置功能(无需插件的))
+- colors(主题配色方案, 需要使用的时候 直接在init修改即可, 修改主题配色的插件，本人觉得没有什么必要，所以就不安装了，手动修改即可)
 - plug.config(各个插件的配置文件,个人比较喜欢归类,所以每一个插件的配置文件都是单独一个vim文件的)
 
 ## 功能说明
-
+- [x] Start Page
+- [x] Airline
 - [x] File System
-- [x] File System Icon
-- [x] File System Git
-- [x] Fold
+- [x] Git Gutter
+- [x] Fold && Indent tips
 - [x] JavaScript
 - [x] JSX
+- [x] Python
 - [x] Sass, Less, Css
-
+- [x] Color render
+- [x] Eslint
+- [x] PyLint
+- [x] Python virtualenv wrapper
+- [x] find file in project
+- [x] TagBar Support(js, python, md, json)
 
