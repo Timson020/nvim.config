@@ -23,6 +23,7 @@ Plug 'airblade/vim-gitgutter'
 " 文件搜索插件
 Plug 'kien/ctrlp.vim'
 " Plug 'wincent/command-t'
+" 注释工具
 Plug 'vim-scripts/The-NERD-Commenter'
 
 " 函数 类名 拓展栏
@@ -38,6 +39,8 @@ Plug 'ternjs/tern_for_vim'
 
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'
+" 彩虹括号显示
+Plug 'luochen1990/rainbow'
 
 " python virtualenv
 Plug 'jmcantrell/vim-virtualenv'
