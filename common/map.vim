@@ -20,5 +20,8 @@ nmap <silent> <LocalLeader>r :TagbarToggle<cr>
 nmap <silent> <LocalLeader>an :ALENext<cr>
 nmap <silent> <LocalLeader>ap :ALEPrevious<cr>
 
+" nerd-commenter
+nmap <silent> mm <leader>c<space>
+
 " 保存
 nmap <silent> <c-s> :w<cr>

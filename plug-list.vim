@@ -23,6 +23,7 @@ Plug 'airblade/vim-gitgutter'
 " 文件搜索插件
 Plug 'kien/ctrlp.vim'
 " Plug 'wincent/command-t'
+Plug 'vim-scripts/The-NERD-Commenter'
 
 " 函数 类名 拓展栏
 Plug 'majutsushi/tagbar'
