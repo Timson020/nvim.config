@@ -14,7 +14,7 @@
 - Brew(推荐)
 ```bash
 # 必须要安装的
-$ brew install neovim
+$ brew install neovim ripgrep
 
 # 非常推荐使用
 $ brew cask install iterm2
@@ -33,7 +33,9 @@ $ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 - Yum
 ```bash
-$ yum install -y neovim python36-neovim
+$ yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
+$ yum update
+$ yum install -y neovim ripgrep python36-neovim
 ```
 
 - 安装vim-plug插件管理同Mac OS 方法一致

@@ -2,7 +2,8 @@
 call plug#begin()
 
 " 开始页面
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
 
 Plug 'itchyny/vim-cursorword'
 
@@ -21,8 +22,11 @@ Plug 'kristijanhusak/defx-git'
 Plug 'airblade/vim-gitgutter'
 
 " 文件搜索插件
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
 " Plug 'wincent/command-t'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+
 " 注释工具
 Plug 'vim-scripts/The-NERD-Commenter'
 

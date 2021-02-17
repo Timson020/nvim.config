@@ -4,8 +4,14 @@ let g:maplocalleader=';'
 nmap <silent> <LocalLeader>f :Defx<cr>
 
 " ;p 打开搜索文件页面
-nmap <silent> <LocalLeader>p :CtrlP<cr>
-nmap <silent> <LocalLeader>b :CtrlPBuffer<cr>
+" Clap
+nmap <silent> <LocalLeader>cf :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
+nmap <silent> <LocalLeader>git :<C-u>Clap git_diff_files<cr>
+nmap <silent> <LocalLeader>ss :<C-u>Clap filetypes<cr>
+nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
+" CtrlP
+" nmap <silent> <LocalLeader>p :CtrlP<cr>
+" nmap <silent> <LocalLeader>b :CtrlPBuffer<cr>
 
 " 新开标签页
 nmap <silent> <LocalLeader>t :tabnew<cr>

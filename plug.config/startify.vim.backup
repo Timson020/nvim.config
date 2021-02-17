@@ -37,8 +37,11 @@ function! Startify_center(lines) abort
   return centered_lines
 endfunction
 
-let g:startify_custom_header = Startify_center(s:custom_header)
-let g:startify_custom_footer = Startify_center(s:custom_footer_2)
+" let g:startify_custom_header = Startify_center(s:custom_header)
+" let g:startify_custom_footer = Startify_center(s:custom_footer_2)
+
+let g:startify_custom_header = s:custom_header
+let g:startify_custom_footer = s:custom_footer_2
 
 autocmd! FileType startify
 autocmd  FileType startify set laststatus=0 showtabline=0
