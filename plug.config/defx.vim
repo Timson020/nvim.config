@@ -36,13 +36,10 @@ call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': ''
 " 		\ 'Unknown'   : '?'
 " 		\ })
 
-
-" 设置快捷键
-
-
 " Function for Defx
 autocmd FileType defx call s:defx_my_settings()
 
+" 设置快捷键
 function! s:defx_my_settings() abort
 		" 目录树
 		nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
