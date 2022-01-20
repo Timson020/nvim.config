@@ -32,12 +32,18 @@ let g:dashboard_custom_header = s:custom_header
 
 let g:dashboard_custom_footer = s:custom_footer
 
+let g:dashboard_default_executive ='clap'
+
 let g:dashboard_custom_section = {
 		\ 'new_file'       :{
       \ 'description': ['  Open New File                         SPC c n'],
       \ 'command': 'tabnew'
 		\ },
-		\ }
+		\ 'find_word'           :{
+		  \ 'description': ['  Find word                             SPC f w'],
+		  \ 'command': 'Clap grep2'
+		\ },
+\ }
 
 " \ 'last_session'        :{
 "    \ 'description': ['  Reload last session                   SPC s l'],

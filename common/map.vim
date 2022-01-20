@@ -6,6 +6,7 @@ nmap <silent> <LocalLeader>f :Defx<cr>
 " ;p 打开搜索文件页面
 " Clap
 nmap <silent> <LocalLeader>cf :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
+nmap <silent> <LocalLeader>cw :<C-u>Clap grep2<cr>
 nmap <silent> <LocalLeader>git :<C-u>Clap git_diff_files<cr>
 nmap <silent> <LocalLeader>ss :<C-u>Clap filetypes<cr>
 nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
