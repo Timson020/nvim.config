@@ -5,7 +5,7 @@ set number
 set relativenumber
 
 " 设置主体
-colorscheme solarized8_low
+colorscheme solarized8_flat
 set bg=dark
 
 " 显示语法

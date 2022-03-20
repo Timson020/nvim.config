@@ -1,13 +1,25 @@
 let g:maplocalleader=';'
 
 " 保存
-nmap <silent> <c-s> :w<cr>
+" C-s == control + s
+nmap <silent> <C-s> :w<cr>
 
 " 新开标签页
-" nmap <silent> <LocalLeader>t :tabnew<cr>
-nmap <silent> <c-t> :tabnew<cr>
+nmap <silent> <C-t> :tabnew<cr>
 nmap <silent> <LocalLeader>q :tabnext<cr>
 nmap <silent> <LocalLeader>e :tabprevious<cr>
+
+" controller + jkhl 重新控制每给窗口的大小
+nmap <silent> <C-h> :vertical resize+2<cr>
+nmap <silent> <C-l> :vertical resize-2<cr>
+nmap <silent> <C-j> :resize+2<cr>
+nmap <silent> <C-k> :resize-2<cr>
+
+" 快速浏览
+nmap <silent> <C-u> 4k
+nmap <silent> <C-d> 4j
+
+" nmap <silent> <LocalLeader>t :sp | terminal<cr>
 
 " ;p 打开搜索文件页面
 " 插件名 vim-clap
@@ -17,6 +29,7 @@ nmap <silent> <LocalLeader>git :<C-u>Clap git_diff_files<cr>
 nmap <silent> <LocalLeader>ss :<C-u>Clap filetypes<cr>
 nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
 
+" 打开搜索文件页面
 " 插件名     kien/ctrlp.vim
 " nmap <silent> <LocalLeader>p :CtrlP<cr>
 " nmap <silent> <LocalLeader>b :CtrlPBuffer<cr>
