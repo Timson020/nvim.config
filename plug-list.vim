@@ -49,25 +49,25 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
 
-" dockerfile语法高亮
-Plug 'ekalinin/dockerfile.vim'
-
 " Less语法高亮
 Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 
 " Sass语法高亮
 Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass', 'scss' ] }
 
+" dockerfile语法高亮
+Plug 'ekalinin/dockerfile.vim'
+
 " TODO LSP
 " 代码自动补全
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 
 " javascript until and thiry part for autocomplete
-Plug 'ternjs/tern_for_vim'
+" Plug 'ternjs/tern_for_vim'
 
 " 语法检测 (确保eslint已经全局安装)
 " Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'javascriptreact' ] }
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " TODO 插件结束
 call plug#end()
