@@ -36,13 +36,9 @@ Plug 'majutsushi/tagbar'
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
-" 代码自动补全
-Plug 'valloric/youcompleteme'
-" javascript until and thiry part for autocomplete
-Plug 'ternjs/tern_for_vim'
-
 " 支持css/sass/less/html颜色显示
 Plug 'ap/vim-css-color'
+
 " 彩虹括号显示
 Plug 'luochen1990/rainbow'
 
@@ -56,14 +52,18 @@ Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
 " dockerfile语法高亮
 Plug 'ekalinin/dockerfile.vim'
 
-" html语法检测
-" Plug 'othree/html5-syntax.vim'
-
 " Less语法高亮
 Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 
 " Sass语法高亮
-Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass' ] }
+Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass', 'scss' ] }
+
+" TODO LSP
+" 代码自动补全
+Plug 'valloric/youcompleteme'
+
+" javascript until and thiry part for autocomplete
+Plug 'ternjs/tern_for_vim'
 
 " 语法检测 (确保eslint已经全局安装)
 " Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'javascriptreact' ] }

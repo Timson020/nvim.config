@@ -10,8 +10,8 @@ nmap <silent> <LocalLeader>q :tabnext<cr>
 nmap <silent> <LocalLeader>e :tabprevious<cr>
 
 " controller + jkhl 重新控制每给窗口的大小
-nmap <silent> <C-h> :vertical resize+2<cr>
-nmap <silent> <C-l> :vertical resize-2<cr>
+nmap <silent> <C-l> :vertical resize+2<cr>
+nmap <silent> <C-h> :vertical resize-2<cr>
 nmap <silent> <C-j> :resize+2<cr>
 nmap <silent> <C-k> :resize-2<cr>
 

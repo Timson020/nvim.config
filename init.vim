@@ -98,3 +98,8 @@ for s:path in split(glob('~/.config/nvim/plug.config/*.vim'), '\n')
 	exe 'source ' . s:path
 endfor
 
+" 加载 LSP 插件的配置文件
+for s:path in split(glob('~/.config/nvim/lsp.config/*.vim'), '\n')
+	exe 'source ' . s:path
+endfor
+
