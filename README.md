@@ -74,6 +74,11 @@ $ cd $HOME/.config/nvim/plugged/tern_for_vim
 $ npm i
 ```
 
+- 语法高亮需要手动安装
+```
+$ :TSInstall c python go scss dockerfil html css json
+```
+
 ## 使用
 
 - 启动

@@ -45,18 +45,21 @@ Plug 'luochen1990/rainbow'
 " python virtualenv
 Plug 'jmcantrell/vim-virtualenv'
 
+" 多语言语法高亮
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " JavaScript语法高亮
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
 
 " Less语法高亮
-Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
+" Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
 
 " Sass语法高亮
-Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass', 'scss' ] }
+" Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass', 'scss' ] }
 
 " dockerfile语法高亮
-Plug 'ekalinin/dockerfile.vim'
+" Plug 'ekalinin/dockerfile.vim'
 
 " TODO LSP
 " 代码自动补全

@@ -35,13 +35,17 @@ let g:dashboard_custom_footer = s:custom_footer
 let g:dashboard_default_executive ='clap'
 
 let g:dashboard_custom_section = {
-		\ 'new_file'       :{
-      \ 'description': ['  Open New File                         SPC c n'],
+		\ 'new_file'           :{
+      \ 'description': ['  Open New File     '],
       \ 'command': 'tabnew'
 		\ },
-		\ 'find_word'           :{
-		  \ 'description': ['  Find word                             SPC f w'],
+		\ 'find_word'          :{
+		  \ 'description': ['  Find word         '],
 		  \ 'command': 'Clap grep2'
+		\ },
+		\ 'editor_keybindings': {
+			\ 'description': ['  Edit keybindings  '],
+			\ 'command': 'edit ~/.config/nvim/common/keybindings.vim'
 		\ },
 \ }
 
