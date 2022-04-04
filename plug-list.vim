@@ -51,19 +51,16 @@ Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
 
 " TODO LSP
-" 代码自动补全
-
+" Language server protocol
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
-" 以下插件弃用
-" Plug 'valloric/youcompleteme'
-" javascript until and thiry part for autocomplete
-" Plug 'ternjs/tern_for_vim'
-
-" 语法检测 (确保eslint已经全局安装)
-" Plug 'vim-syntastic/syntastic', { 'for': [ 'javascript', 'javascriptreact' ] }
-" Plug 'dense-analysis/ale'
+" 代码补全引擎 不含补全源
+Plug 'hrsh7th/nvim-cmp'
+" 下面都是补全源
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-cmdline'
 
 " TODO 插件结束
 call plug#end()

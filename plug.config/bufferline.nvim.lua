@@ -9,15 +9,15 @@ bufferline.setup({
 		mode = "tabs",
 		separator_style = "padded_slant",
 		numbers = "ordinal",
-		left_trunc_marker = '',
-		right_trunc_marker = '',
-		modified_icon = "●",
-		indicator_icon = "▎",
+		left_trunc_marker = '  ',
+		right_trunc_marker = '  ',
+		modified_icon = " ● ",
+		indicator_icon = "▎ ",
 		show_close_icon = false,
 		show_buffer_close_icons = true,
 		show_tab_indicators = true,
-		tab_size = 30,
-		max_name_length = 20,
+		tab_size = 34,
+		max_name_length = 18,
 		always_show_bufferline = true,
 		-- 关闭 Tab 的命令，这里使用 moll/vim-bbye 的 :Bdelete 命令
 		close_command = "Bdelete! %d",
@@ -39,7 +39,7 @@ bufferline.setup({
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       local s = " "
       for e, n in pairs(diagnostics_dict) do
-        local sym = e == "error" and " " or (e == "warning" and " " or "")
+        local sym = e == "error" and "   " or (e == "warning" and "   " or "  ")
         s = s .. n .. sym
       end
       return s
