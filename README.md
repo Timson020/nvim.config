@@ -58,22 +58,9 @@ $ brew tap homebrew/cask-fonts
 $ brew cask install font-hack-nerd-font
 ```
 
-- vim-plug安装
+- 依赖安装
 ```bash
 $ brew install go cmake
-$ cd $VIMCONFIG/plugged/youcomplete/
-$ python3 install.py --all --js-completer
-```
-
-- 安装tean_for_vim node所需要支持的node_modules
-```bash
-$ cd $HOME/.config/nvim/plugged/tern_for_vim
-$ npm i
-```
-
-- 语法高亮需要手动安装
-```
-$ :TSInstall c python go scss dockerfil html css json
 ```
 
 ## 使用
@@ -81,8 +68,6 @@ $ :TSInstall c python go scss dockerfil html css json
 - 启动
 ```bash
 $ nvim
-
-$ nvim ./xx
 ```
 
 ## 结构说明
@@ -93,21 +78,17 @@ $ nvim ./xx
 - common(修改自定义映射键位, 其他配置功能(无需插件的))
 - colors(主题配色方案, 需要使用的时候 直接在init修改即可, 修改主题配色的插件，本人觉得没有什么必要，所以就不安装了，手动修改即可)
 - plug.config(各个插件的配置文件,个人比较喜欢归类,所以每一个插件的配置文件都是单独一个vim文件的)
+- lua(主要存放LSP配置，由lua编写)
 
 ## 功能说明
 - [x] Start Page
-- [x] Airline
+- [x] LuaLine && bufferLine
 - [x] File System
 - [x] Git Gutter
 - [x] Fold && Indent tips
-- [x] JavaScript
-- [x] JSX
-- [x] Python
-- [x] Sass, Less, Css
 - [x] Color render
-- [x] Eslint
-- [x] PyLint
 - [x] Python virtualenv wrapper
 - [x] find file in project
+- [x] LSP(c, go, python, javascript, javasciptreact)
 - [x] TagBar Support(js, python, md, json)
 
