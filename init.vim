@@ -5,8 +5,8 @@ set number
 set relativenumber
 
 " 设置主体
-colorscheme solarized8_flat
 set bg=dark
+colorscheme solarized8_flat
 
 " 显示语法
 syntax enable
@@ -88,18 +88,19 @@ endfunction
 
 exe 'source ~/.config/nvim/plug-list.vim'
 
+lua require('lsp.setup')
+
 " COMMON 设置实用工具
-for s:path in split(glob('~/.config/nvim/common/*.vim'), '\n')
+for s:path in split(glob('~/.config/nvim/common/*.*'), '\n')
 	exe 'source ' . s:path
 endfor
 
 " 加载插件的配置文件
-for s:path in split(glob('~/.config/nvim/plug.config/*.vim'), '\n')
+for s:path in split(glob('~/.config/nvim/plug.config/*.*'), '\n')
 	exe 'source ' . s:path
 endfor
 
 " 加载 LSP 插件的配置文件
-for s:path in split(glob('~/.config/nvim/lsp.config/*.vim'), '\n')
+for s:path in split(glob('~/.config/nvim/lsp.config/*.*'), '\n')
 	exe 'source ' . s:path
 endfor
-

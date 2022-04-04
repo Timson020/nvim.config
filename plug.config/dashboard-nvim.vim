@@ -40,8 +40,12 @@ let g:dashboard_custom_section = {
       \ 'command': 'tabnew'
 		\ },
 		\ 'find_word'          :{
-		  \ 'description': ['  Find word         '],
-		  \ 'command': 'Clap grep2'
+		  \ 'description': ['  Find Work         '],
+		  \ 'command': 'Telescope live_grep'
+		\ },
+		\ 'find_file'          :{
+		  \ 'description': ['  Find File         '],
+		  \ 'command': 'Telescope find_files'
 		\ },
 		\ 'editor_keybindings': {
 			\ 'description': ['  Edit keybindings  '],

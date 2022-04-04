@@ -2,30 +2,28 @@
 call plug#begin()
 
 " 开始页面
-" Plug 'mhinz/vim-startify'
 Plug 'glepnir/dashboard-nvim'
 
+" 显示页面当前选择的单词
 Plug 'itchyny/vim-cursorword'
 
-" 美化界面
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'nathanaelkane/vim-indent-guides'
-
+" 图标
+Plug 'kyazdani42/nvim-web-devicons'
 " 文件系统插件
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'kristijanhusak/defx-icons'
-Plug 'kristijanhusak/defx-git'
+Plug 'kyazdani42/nvim-tree.lua'
+" 顶部标签页
+Plug 'akinsho/bufferline.nvim'
+" 底部信息栏
+Plug 'nvim-lualine/lualine.nvim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
 
 " 文件搜索插件
-" Plug 'kien/ctrlp.vim'
-" Plug 'wincent/command-t'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'BurntSushi/ripgrep'
 
 " 注释工具
 Plug 'vim-scripts/The-NERD-Commenter'
@@ -52,19 +50,14 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
 
-" Less语法高亮
-" Plug 'groenewege/vim-less', { 'for': [ 'less' ] }
-
-" Sass语法高亮
-" Plug 'cakebaker/scss-syntax.vim', { 'for': [ 'sass', 'scss' ] }
-
-" dockerfile语法高亮
-" Plug 'ekalinin/dockerfile.vim'
-
 " TODO LSP
 " 代码自动补全
-" Plug 'valloric/youcompleteme'
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+
+" 以下插件弃用
+" Plug 'valloric/youcompleteme'
 " javascript until and thiry part for autocomplete
 " Plug 'ternjs/tern_for_vim'
 

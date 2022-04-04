@@ -22,17 +22,12 @@ nmap <silent> <C-d> 4j
 " nmap <silent> <LocalLeader>t :sp | terminal<cr>
 
 " ;p 打开搜索文件页面
-" 插件名 vim-clap
-nmap <silent> <LocalLeader>cf :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
-nmap <silent> <LocalLeader>cw :<C-u>Clap grep2<cr>
-nmap <silent> <LocalLeader>git :<C-u>Clap git_diff_files<cr>
-nmap <silent> <LocalLeader>ss :<C-u>Clap filetypes<cr>
-nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
-
-" 打开搜索文件页面
-" 插件名     kien/ctrlp.vim
-" nmap <silent> <LocalLeader>p :CtrlP<cr>
-" nmap <silent> <LocalLeader>b :CtrlPBuffer<cr>
+" 插件名 telescope.nvim
+nmap <silent> <LocalLeader>ff :Telescope find_files<cr>
+nmap <silent> <LocalLeader>fw :Telescope live_grep<cr>
+nmap <silent> <LocalLeader>git :Telescope git_files<cr>
+nmap <silent> <LocalLeader>buf :Telescope buffers<cr>
+" nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
 
 " 打开tagbar
 " 插件名     majutsushi/tagbar
@@ -40,13 +35,14 @@ nmap <silent> <LocalLeader>r :TagbarToggle<cr>
 
 " ale查询下一个语法错误
 " 插件名     dense-analysis/ale
-nmap <silent> <LocalLeader>an :ALENext<cr>
-nmap <silent> <LocalLeader>ap :ALEPrevious<cr>
+" nmap <silent> <LocalLeader>an :ALENext<cr>
+" nmap <silent> <LocalLeader>ap :ALEPrevious<cr>
 
 " 注释工具
 " 插件名     vim-scripts/The-NERD-Commenter
 nmap <silent> mm <leader>c<space>
 
-" ;f 显示文件目录
+" 显示文件目录
 " 插件名     Shougo/defx.nvim
-nmap <silent> <LocalLeader>f :Defx<cr>
+" nmap <silent> <LocalLeader>f :Defx<cr>
+nmap <silent> <LocalLeader>t :NvimTreeToggle<cr>

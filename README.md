@@ -18,9 +18,6 @@ $ brew install neovim ripgrep
 
 # 非常推荐使用
 $ brew cask install iterm2
-
-# 使用defx插件必须要安装
-$ pip3 install pynvim
 ```
 
 - 安装vim-plug插件管理
