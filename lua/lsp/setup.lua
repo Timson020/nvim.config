@@ -12,9 +12,9 @@ local servers = {
 	golangci_lint_ls = require("lsp.config.go"),
 	pyright = require("lsp.config.python"),
 	solang = require("lsp.config.solidity"),
-	eslint = require("lsp.config.eslint"),
 	html = require("lsp.config.html"),
-	-- quick_lint_js = require("lsp.config.javascript"),
+	tsserver = require("lsp.config.tsserver"),
+	eslint = require("lsp.config.eslint"),
 }
 
 -- 自动安装 Language Servers
@@ -40,3 +40,5 @@ lsp_installer.on_server_ready(function(server)
         server:setup({})
     end
 end)
+
+require('lsp.ui')

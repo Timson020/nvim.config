@@ -65,6 +65,9 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 " 片段补全源
 Plug 'rafamadriz/friendly-snippets'
+" 补全美化
+Plug 'onsails/lspkind-nvim'
+Plug 'glepnir/lspsaga.nvim'
 
 " TODO 插件结束
 call plug#end()

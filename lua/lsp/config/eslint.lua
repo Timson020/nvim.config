@@ -14,7 +14,10 @@ local opts = {
 			mode = "location"
   	}
 	},
-	flags = { },
+	flags = {
+    debounce_text_changes = 150,
+  },
+	-- 暂时无法生效，使用tsserver代替
 	on_attach = function(client, bufnr)
 		-- 禁用格式化功能，交给专门插件插件处理
     client.resolved_capabilities.document_formatting = false
@@ -29,7 +32,7 @@ local opts = {
 }
 
 return {
-	on_step = function(server)
+	on_setup = function(server)
 		server:setup(opts)
 	end
 }
