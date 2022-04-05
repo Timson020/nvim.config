@@ -20,7 +20,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'airblade/vim-gitgutter'
 
 " 文件搜索插件
-" Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'

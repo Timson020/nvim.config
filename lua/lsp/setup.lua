@@ -14,7 +14,7 @@ local servers = {
 	solang = require("lsp.config.solidity"),
 	eslint = require("lsp.config.eslint"),
 	html = require("lsp.config.html"),
-	quick_lint_js = require("lsp.config.javascript"),
+	-- quick_lint_js = require("lsp.config.javascript"),
 }
 
 -- 自动安装 Language Servers

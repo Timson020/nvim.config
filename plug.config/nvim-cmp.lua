@@ -74,4 +74,6 @@ cmp.setup.cmdline(":", {
   }),
 })
 
+-- vim.g.vsnip_filetypes = {}
+-- vim.g.vsnip_filetypes.javascriptreact = { 'javascript' }
 -- vim.g.vsnip_snippet_dir = '~/.config/nvim/plugged/friendly-snippets/snippets'
