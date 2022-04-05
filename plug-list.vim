@@ -57,10 +57,15 @@ Plug 'williamboman/nvim-lsp-installer'
 
 " 代码补全引擎 不含补全源
 Plug 'hrsh7th/nvim-cmp'
+" 片段补全引擎
+Plug 'hrsh7th/vim-vsnip'
 " 下面都是补全源
+Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
+" 片段补全源
+Plug 'rafamadriz/friendly-snippets'
 
 " TODO 插件结束
 call plug#end()
