@@ -56,6 +56,9 @@ cmp.setup({
       end
     end, {"i", "s"}),
 	},
+
+	-- 使用lspkind-nvim显示类型图标 (新增)
+  formatting = require('lsp.ui').formatting,
 })
 
 -- / 查找模式使用 buffer 源

@@ -7,10 +7,10 @@ pluginKeys.mapLSP = function(mapbuf)
   -- rename
   mapbuf('n', '<LocalLeader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opt)
   -- code action
-  -- mapbuf('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opt)
+	mapbuf('n', '<LocalLeader>ca', '<cmd>Lspsaga code_action<CR>', opt)
   -- go xx
 	mapbuf('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
-  -- mapbuf('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
+	mapbuf('n', 'gh', '<cmd>Lspsaga hover_doc<CR>', opt)
   -- mapbuf('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opt)
   -- mapbuf('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
   -- mapbuf('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opt)

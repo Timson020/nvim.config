@@ -6,6 +6,8 @@ Plug 'glepnir/dashboard-nvim'
 
 " 显示页面当前选择的单词
 Plug 'itchyny/vim-cursorword'
+" 缩紧引导线
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " 图标
 Plug 'kyazdani42/nvim-web-devicons'
@@ -67,7 +69,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'rafamadriz/friendly-snippets'
 " 补全美化
 Plug 'onsails/lspkind-nvim'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim'
 
 " TODO 插件结束
 call plug#end()
