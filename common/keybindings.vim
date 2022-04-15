@@ -19,6 +19,7 @@ nmap <silent> <C-k> :resize-2<cr>
 nmap <silent> <C-u> 4k
 nmap <silent> <C-d> 4j
 
+" 打开terminal
 " nmap <silent> <LocalLeader>t :sp | terminal<cr>
 
 " ;p 打开搜索文件页面
