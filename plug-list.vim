@@ -30,7 +30,7 @@ Plug 'BurntSushi/ripgrep'
 Plug 'vim-scripts/The-NERD-Commenter'
 
 " 函数 类名 拓展栏
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
@@ -46,7 +46,6 @@ Plug 'jmcantrell/vim-virtualenv'
 
 " 多语言语法高亮
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 " JavaScript语法高亮
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
