@@ -31,8 +31,8 @@ nmap <silent> <LocalLeader>buf :Telescope buffers<cr>
 " nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
 
 " 打开tagbar
-" 插件名     majutsushi/tagbar
-nmap <silent> <LocalLeader>r :TagbarToggle<cr>
+" 插件名     simrat39/symbols-outline.nvim
+nmap <silent> <LocalLeader>r :SymbolsOutline<cr>
 
 " ale查询下一个语法错误
 " 插件名     dense-analysis/ale
