@@ -9,11 +9,14 @@ pluginKeys.mapLSP = function(mapbuf)
   -- code action
 	mapbuf('n', '<LocalLeader>ca', '<cmd>Lspsaga code_action<CR>', opt)
   -- go xx
-	mapbuf('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+	-- 查看doc
 	mapbuf('n', 'gh', '<cmd>Lspsaga hover_doc<CR>', opt)
-  -- mapbuf('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opt)
-  -- mapbuf('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
-  -- mapbuf('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
+	-- 查看申明
+	mapbuf('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+	-- 查看引用
+	mapbuf('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
+	mapbuf('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opt)
+	mapbuf('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
   -- diagnostic
 	mapbuf('n', '<LocalLeader>go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
 	mapbuf('n', '<LocalLeader>ap', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
