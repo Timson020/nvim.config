@@ -7,31 +7,31 @@ end
 -- 列表操作快捷键
 -- local list_keys = require('keybindings').nvimTreeList
 
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_icon_padding = '  '
-vim.g.nvim_tree_icons = {
-  default = "",
-	symlink = "",
-  git = {
-		unstaged = "✗",
-    staged = "✓",
-  	unmerged = "",
-    renamed = "➜",
-    untracked = "★",
-    deleted = "",
-    ignored = "◌",
-  },
-  folder = {
-  	arrow_open = "  ",
-    arrow_closed = "  ",
-    default = "   ",
-    open = "   ",
-    empty = "   ",
-    empty_open = "   ",
-    symlink = "   ",
-    symlink_open = "   ",
-  }
-}
+-- vim.g.nvim_tree_indent_markers = 1
+-- vim.g.nvim_tree_icon_padding = '  '
+-- vim.g.nvim_tree_icons = {
+--   default = "",
+-- 	symlink = "",
+--   git = {
+-- 		unstaged = "✗",
+--     staged = "✓",
+--   	unmerged = "",
+--     renamed = "➜",
+--     untracked = "★",
+--     deleted = "",
+--     ignored = "◌",
+--   },
+--   folder = {
+--   	arrow_open = "  ",
+--     arrow_closed = "  ",
+--     default = "   ",
+--     open = "   ",
+--     empty = "   ",
+--     empty_open = "   ",
+--     symlink = "   ",
+--     symlink_open = "   ",
+--   }
+-- }
 
 local list_keys = {
 	-- 打开文件或文件夹
@@ -73,6 +73,52 @@ nvim_tree.setup({
       -- 显示图标
       signcolumn = 'yes',
   	},
+		renderer = {
+			indent_markers = {
+        enable = false,
+        inline_arrows = true,
+        icons = {
+          corner = "└",
+          edge = "│",
+          item = "│",
+          none = " ",
+        },
+      },
+			icons = {
+				webdev_colors = true,
+				padding = " ",
+				show = {
+          file = true,
+          folder = true,
+          folder_arrow = true,
+          git = true,
+        },
+				glyphs = {
+					default = "",
+        	symlink = "",
+          bookmark = "",
+					folder = {
+						arrow_open = "  ",
+						arrow_closed = "  ",
+						default = "   ",
+						open = "   ",
+						empty = "   ",
+						empty_open = "   ",
+						symlink = "   ",
+						symlink_open = "   ",
+					},
+					git = {
+						unstaged = "✗",
+						staged = "✓",
+						unmerged = "",
+						renamed = "➜",
+						untracked = "★",
+						deleted = "",
+						ignored = "◌",
+					},
+				}
+			}
+		},
     -- 不显示 git 状态图标
     git = {
     	enable = true,
@@ -115,3 +161,4 @@ nvim_tree.setup({
 vim.cmd([[
 	autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 ]])
+

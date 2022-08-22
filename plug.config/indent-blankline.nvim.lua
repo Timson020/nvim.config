@@ -37,9 +37,5 @@ ident_blankline.setup({
     "toggleterm",
   },
   -- 竖线样式
-  -- char = '¦'
-  -- char = '┆'
-  -- char = '│'
-  -- char = "⎸",
   char = "▏",
 })
