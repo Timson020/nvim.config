@@ -7,9 +7,9 @@ local db = require('dashboard')
 -- db.preview_file_height = 12
 
 db.custom_center = {
-	{ icon = ' ', desc = 'Open New File', action = 'tabnew' },
-	{ icon = ' ', desc = 'Find Work', action = 'Telescope live_grep' },
-	{ icon = ' ', desc = 'Find File', action = 'Telescope find_files' },
+	{ icon = ' ', desc = 'Open New File   ', action = 'tabnew' },
+	{ icon = ' ', desc = 'Find Work       ', action = 'Telescope live_grep' },
+	{ icon = ' ', desc = 'Find File       ', action = 'Telescope find_files' },
 	{ icon = ' ', desc = 'Edit keybindings', action = 'edit ~/.config/nvim/common/keybindings.vim' },
 }
 
