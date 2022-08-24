@@ -1,4 +1,19 @@
 local opts = {
+	settings = {
+		codeAction = {
+    	disableRuleComment = {
+      	enable = true,
+      	location = "separateLine"
+    	},
+    	showDocumentation = {
+      	enable = true
+    	}
+		},
+		packageManager = "npm",
+		workingDirectory = {
+			mode = "location"
+  	}
+	},
   flags = {
     debounce_text_changes = 150,
   },

@@ -43,6 +43,9 @@ $ yum install -y neovim ripgrep python36-neovim
 > 方便在vim下代码阅读工具(部分插件需要用到)
 ```bash
 $ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+
+# 用与支持lsp 中 tsserver
+$ npm i typescript typescript-language-server -g
 ```
 
 - Fcitx-remote
