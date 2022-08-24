@@ -52,13 +52,13 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " manual // 手工定义折叠
 " indent // 用缩进表示折叠
 " expr　 // 用表达式来定义折叠
-" jsyntax // 用语法高亮来定义折叠
+" syntax // 用语法高亮来定义折叠
 " diff // 对没有更改的文本进行折叠
 " marker // 用标志折叠
-set foldmethod=manual
+set foldmethod=syntax
 
 " 折叠的层级
-set foldlevel=1
+set foldlevel=4
 
 set foldtext=FoldText()
 
