@@ -12,7 +12,11 @@ bufferline.setup({
 		left_trunc_marker = '  ',
 		right_trunc_marker = '  ',
 		modified_icon = " ● ",
-		indicator_icon = "▎ ",
+		-- indicator_icon = "▎ ",
+		indicator = {
+			style = 'icon',
+			icon = "▎ ",
+		},
 		show_close_icon = false,
 		show_buffer_close_icons = true,
 		show_tab_indicators = true,
