@@ -48,7 +48,8 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " JavaScript语法高亮
 Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact' ] }
+Plug 'leafgarland/typescript-vim', { 'for': [ 'typescript', 'typescriptreact' ] }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' ] }
 
 " TODO LSP
 " Language server protocol
