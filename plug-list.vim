@@ -8,6 +8,9 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'itchyny/vim-cursorword'
 " 缩紧引导线
 Plug 'lukas-reineke/indent-blankline.nvim'
+" 缩紧
+Plug 'kevinhwang91/nvim-ufo'
+Plug 'kevinhwang91/promise-async'
 
 " 图标
 Plug 'kyazdani42/nvim-web-devicons'
