@@ -4,9 +4,9 @@ set number
 " 显示相对行号
 set relativenumber
 
-" 设置主体
-set bg=dark
-colorscheme solarized8_flat
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " 显示语法
 syntax enable
@@ -104,3 +104,7 @@ endfor
 for s:path in split(glob('~/.config/nvim/lsp.config/*.*'), '\n')
 	exe 'source ' . s:path
 endfor
+
+" 设置主题
+set bg=dark
+" colorscheme zephyrium

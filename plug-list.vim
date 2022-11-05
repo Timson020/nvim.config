@@ -1,6 +1,9 @@
 " TODO 插件开始
 call plug#begin()
 
+" 配色方案
+Plug 'titanzero/zephyrium'
+
 " 开始页面
 Plug 'glepnir/dashboard-nvim'
 
@@ -57,7 +60,8 @@ Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact', 'ty
 " TODO LSP
 " Language server protocol
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 
 " 代码补全引擎 不含补全源
 Plug 'hrsh7th/nvim-cmp'
