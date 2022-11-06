@@ -3,6 +3,9 @@ call plug#begin()
 
 " 配色方案
 Plug 'titanzero/zephyrium'
+Plug 'glepnir/zephyr-nvim'
+Plug 'mhartington/oceanic-next'
+Plug 'RRethy/nvim-base16'
 
 " 开始页面
 Plug 'glepnir/dashboard-nvim'
