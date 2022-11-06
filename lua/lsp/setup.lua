@@ -1,5 +1,6 @@
 local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
+local mason = require("mason")
 
 local list = require("lsp.list")
 
@@ -29,6 +30,16 @@ for _, value in pairs(servers) do
 		lspconfig[value].setup(vim.tbl_deep_extend("force", default_config, config))
 	end
 end
+
+mason.setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗",
+		}
+	}
+})
 
 mason_lspconfig.setup({
 	ensure_installed = installServers,

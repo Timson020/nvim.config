@@ -24,7 +24,7 @@ local opt = {
 
 		-- Bind shortcut keys
 		-- 绑定快捷键
-		require("keybindings").mapLSP(buf_set_keymap)
+		require("lsp.keybindings").mapLSP(buf_set_keymap)
 		-- Auto format on save
 		-- 保存时自动格式化
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")

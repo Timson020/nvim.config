@@ -8,7 +8,8 @@ local list = {
 	{ name = "html", path = "html", alone = false },
 	{ name = "cssls", path = "css", alone = false },
 	{ name = "tsserver", path = "tsserver", alone = false },
-	{ name = "eslint", path = "eslint", alone = false }
+	{ name = "eslint", path = "eslint", alone = false },
+	{ name = "vuels", path = "vuels", alone = false }
 }
 
 return list
