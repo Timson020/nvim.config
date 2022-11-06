@@ -9,7 +9,7 @@ local list = {
 	{ name = "cssls", path = "css", alone = false },
 	{ name = "tsserver", path = "tsserver", alone = false },
 	{ name = "eslint", path = "eslint", alone = false },
-	{ name = "vuels", path = "vuels", alone = false }
+	{ name = "volar", path = "volar", alone = false }
 }
 
 return list

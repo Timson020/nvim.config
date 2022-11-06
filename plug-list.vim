@@ -52,10 +52,12 @@ Plug 'jmcantrell/vim-virtualenv'
 
 " 多语言语法高亮
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" 弃用
+" 使用tressitter
 " JavaScript语法高亮
-Plug 'leafgarland/typescript-vim', { 'for': [ 'typescript', 'typescriptreact' ] }
-Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' ] }
+" Plug 'leafgarland/typescript-vim', { 'for': [ 'typescript', 'typescriptreact' ] }
+" Plug 'pangloss/vim-javascript', { 'for': [ 'javascript', 'javascriptreact' ] }
+" Plug 'maxmellon/vim-jsx-pretty', { 'for': [ 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' ] }
 
 " TODO LSP
 " Language server protocol
