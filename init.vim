@@ -107,4 +107,5 @@ endfor
 
 " 设置主题
 set bg=dark
+set t_Co=259
 " colorscheme zephyrium
