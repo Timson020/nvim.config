@@ -25,6 +25,12 @@ telescope.setup({
     initial_mode = "insert",
     -- 窗口内快捷键
     mappings = telescopeList,
+
+		layout_config = {
+			vertical = {
+				width = 0.5
+			}
+		}
   },
   pickers = {
     -- 内置 pickers 配置

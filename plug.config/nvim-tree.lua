@@ -86,7 +86,7 @@ nvim_tree.setup({
       },
 			icons = {
 				webdev_colors = true,
-				padding = " ",
+				padding = "  ",
 				show = {
           file = true,
           folder = true,
@@ -94,18 +94,18 @@ nvim_tree.setup({
           git = true,
         },
 				glyphs = {
-					default = "",
-        	symlink = "",
-          bookmark = "",
+					default = " ",
+        	symlink = " ",
+          bookmark = " ",
 					folder = {
-						arrow_open = "  ",
-						arrow_closed = "  ",
-						default = "   ",
-						open = "   ",
-						empty = "   ",
-						empty_open = "   ",
-						symlink = "   ",
-						symlink_open = "   ",
+						arrow_open = " ",
+						arrow_closed = " ",
+						default = " ",
+						open = " ",
+						empty = " ",
+						empty_open = " ",
+						symlink = " ",
+						symlink_open = " ",
 					},
 					git = {
 						unstaged = "✗",
@@ -131,7 +131,7 @@ nvim_tree.setup({
     },
     -- 隐藏 .文件 和 node_modules 文件夹
     filters = {
-      dotfiles = true,
+      dotfiles = false,
       custom = { 'node_modules' },
     },
 		diagnostics = {
