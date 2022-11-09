@@ -1,14 +1,20 @@
+local status, ufoPlugIn = pcall(require, "ufo")
+if not status then
+  vim.notify("没有找到 ufo")
+  return
+end
+
 vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds)
-vim.keymap.set('n', 'zm', require('ufo').closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+vim.keymap.set('n', 'zR', ufoPlugIn.openAllFolds)
+vim.keymap.set('n', 'zM', ufoPlugIn.closeAllFolds)
+vim.keymap.set('n', 'zr', ufoPlugIn.openFoldsExceptKinds)
+vim.keymap.set('n', 'zm', ufoPlugIn.closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
 vim.keymap.set('n', 'K', function()
-  local winid = require('ufo').peekFoldedLinesUnderCursor()
+  local winid = ufoPlugIn.peekFoldedLinesUnderCursor()
   if not winid then
     -- choose one of them
     -- coc.nvim
@@ -47,7 +53,7 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
     table.insert(newVirtText, {suffix, 'MoreMsg'})
     return newVirtText
 end
-require('ufo').setup({
+ufoPlugIn.setup({
 	open_fold_hl_timeout = 150,
 	fold_virt_text_handler = handler,
 	close_fold_kinds = {'imports', 'comment'},
@@ -66,4 +72,4 @@ require('ufo').setup({
     return {'treesitter', 'indent'}
   end
 })
-require('ufo').setFoldVirtTextHandler(bufnr, handler)
+ufoPlugIn.setFoldVirtTextHandler(bufnr, handler)

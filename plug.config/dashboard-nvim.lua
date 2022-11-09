@@ -1,12 +1,16 @@
 -- local home = os.getenv('HOME')
-local db = require('dashboard')
+local status, dashboard = pcall(require, "dashboard")
+if not status then
+	vim.notify("没有找到 dashboard")
+	return
+end
 
 -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
 -- db.preview_command = 'cat | lolcat -F 0.3'
 -- db.preview_file_width = 80
 -- db.preview_file_height = 12
 
-db.custom_center = {
+dashboard.custom_center = {
 	{ icon = ' ', desc = 'Open New File   ', action = 'tabnew' },
 	{ icon = ' ', desc = 'Find Work       ', action = 'Telescope live_grep' },
 	{ icon = ' ', desc = 'Find File       ', action = 'Telescope find_files' },
@@ -14,7 +18,7 @@ db.custom_center = {
 }
 
 -- " http://patorjk.com/software/taag/#p=display&h=2&v=2&f=Merlin1&t=
-db.custom_header = {
+dashboard.custom_header = {
 	'⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣴⣶⣶⣶⣶⣶⠶⣶⣤⣤⣀⠀⠀⠀⠀⠀⠀ ',
 	'⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⣿⣿⣿⠁⠀⢀⠈⢿⢀⣀⠀⠹⣿⣿⣿⣦⣄⠀⠀⠀ ',
 	'⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⠿⠀⠀⣟⡇⢘⣾⣽⠀⠀⡏⠉⠙⢛⣿⣷⡖⠀ ',
@@ -27,7 +31,7 @@ db.custom_header = {
 	'⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣷⣤⣤⣤⣤⣭⣭⣭⣭⣭⣥⣤⣤⣤⣴⣟⠁    ',
 }
 
-db.custom_footer = {
+dashboard.custom_footer = {
 	'+--------------------------------------------------------------------+',
 	'|   ____                                    ____        _ _          |',
 	'|  |  _ \\ _ __ __ _ _ __ __ _  ___  _ __   | __ )  __ _| | |         |',

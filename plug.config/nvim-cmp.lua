@@ -1,4 +1,8 @@
-local cmp = require("cmp")
+local status, cmp = pcall(require, "cmp")
+if not status then
+  vim.notify("没有找到 cmp")
+  return
+end
 
 local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)

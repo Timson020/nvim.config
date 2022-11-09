@@ -1,3 +1,9 @@
+local status, symbolOutline = pcall(require, "symbols-outline")
+if not status then
+  vim.notify("没有找到 symbols")
+  return
+end
+
 local opt = {
 	position = 'right',
 	show_guides = true,
@@ -54,7 +60,7 @@ local opt = {
 	},
 }
 
-require('symbols-outline').setup(opt)
+symbolOutline.setup(opt)
 
 -- vim.g.symbols_outline = {
 --     highlight_hovered_item = true,

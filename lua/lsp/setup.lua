@@ -1,6 +1,11 @@
-local mason_lspconfig = require("mason-lspconfig")
+local mason_status, mason = pcall(require, "mason")
+if not mason_status then
+	vim.notify("mason 未安装")
+	return
+end
+
 local lspconfig = require("lspconfig")
-local mason = require("mason")
+local mason_lspconfig = require("mason-lspconfig")
 
 local list = require("lsp.list")
 
