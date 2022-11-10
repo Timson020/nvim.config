@@ -20,8 +20,8 @@
 
 
 ## 安装
-[MacOS安装](./doc/start_mac.md)
-[Linunx安装](./doc/start_linunx.md)
+- [MacOS安装](./doc/start_mac.md)
+- [Linunx安装](./doc/start_linunx.md)
 
 
 ## 使用
