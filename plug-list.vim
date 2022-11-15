@@ -43,6 +43,9 @@ Plug 'vim-scripts/The-NERD-Commenter'
 " 函数 类名 拓展栏
 Plug 'simrat39/symbols-outline.nvim'
 
+" 命令行
+Plug 'akinsho/toggleterm.nvim'
+
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 

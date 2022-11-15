@@ -25,6 +25,7 @@ local customConfig = {
     -- 打开弹窗后进入的初始模式，默认为 insert，也可以是 normal
     initial_mode = "insert",
 		selection_caret = "   ",
+		prompt_prefix = '  ',
 		layout_strategy = "horizontal",
 		sorting_strategy = "ascending",
 		border = true,
