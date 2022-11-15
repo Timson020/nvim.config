@@ -35,6 +35,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 " 注释工具
 Plug 'vim-scripts/The-NERD-Commenter'
