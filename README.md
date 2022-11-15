@@ -5,66 +5,24 @@
 持续完善
 
 ## ScreenShot
+### 功能截图
 ![screenshot](./screenshot/main.gif)
+![start](./screenshot/img/start.png)
+![outline](./screenshot/img/outline.png)
+![mason](./screenshot/img/mason.png)
+![find_file](./screenshot/img/find_file.png)
+![live_grep](./screenshot/img/live_grep.png)
+
+### 语法高亮截图
+![lua](./screenshot/img/lua_edit.png)
+![vue](./screenshot/img/vue_edit.png)
+![ts](./screenshot/img/ts_edit.png)
+
 
 ## 安装
+- [MacOS安装](./doc/start_mac.md)
+- [Linunx安装](./doc/start_linunx.md)
 
-### MacOS
-
-- Brew(推荐)
-```bash
-# 必须要安装的
-$ brew install neovim ripgrep
-
-# 非常推荐使用
-$ brew cask install iterm2
-```
-
-- 安装vim-plug插件管理
-```bash
-$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-### Linunx
-
-- Yum
-```bash
-$ yum-config-manager --add-repo=https://copr.fedorainfracloud.org/coprs/carlwgeorge/ripgrep/repo/epel-7/carlwgeorge-ripgrep-epel-7.repo
-$ yum update
-$ yum install -y neovim ripgrep python36-neovim
-```
-
-- 安装vim-plug插件管理同Mac OS 方法一致
-
-### 插件必要依赖，都是必须要的(Mac Linux)
-
-- ctags
-> 方便在vim下代码阅读工具(部分插件需要用到)
-```bash
-$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-
-# 用与支持lsp 中 tsserver
-$ npm i typescript typescript-language-server -g
-```
-
-- Fcitx-remote
-> 系统检测中英文输入法
-```bash
-$ brew install fcitx-remote-for-osx
-```
-
-- Nerd-Font
-> defx-icon 显示图标
-```bash
-$ brew tap homebrew/cask-fonts
-$ brew cask install font-hack-nerd-font
-```
-
-- 依赖安装
-```bash
-$ brew install go cmake
-```
 
 ## 使用
 
@@ -92,6 +50,6 @@ $ nvim
 - [x] Color render
 - [x] Python virtualenv wrapper
 - [x] find file in project
-- [x] LSP(c, go, python, javascript, javasciptreact)
+- [x] LSP(c, go, python, javascript, javasciptreact, vue)
 - [x] TagBar Support(js, python, md, json)
 
