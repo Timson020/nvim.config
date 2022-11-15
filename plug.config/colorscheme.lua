@@ -1,5 +1,5 @@
 -- local colorscheme = "zephyrium"
--- local colorscheme = "OceanicNext"
+local colorscheme = "OceanicNext"
 -- local colorscheme = "base16-tokyo-night-dark"
 -- local colorscheme = "base16-atelier-dune"
 -- local colorscheme = "base16-atelier-lakeside"
@@ -15,7 +15,7 @@
 -- local colorscheme = "base16-oceanicnext"
 -- local colorscheme = "base16-silk-dark"
 -- local colorscheme = "base16-solarflare"
-local colorscheme = "base16-solarized-dark"
+-- local colorscheme = "base16-solarized-dark"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
