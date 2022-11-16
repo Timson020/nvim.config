@@ -5,6 +5,9 @@ if not status then
   return
 end
 
+local action = require('telescope.actions')
+local action_layout = require('telescope.actions.layout')
+
 local telescopeList = {
 	i = {
 		[ '<C-i>' ] = 'select_default',
@@ -13,10 +16,14 @@ local telescopeList = {
 		[ '<C-t>' ] = 'select_tab',
 	},
 	n = {
+		['<Esc>'] = action.close,
 		[ 'i' ] = 'select_default',
 		[ 'h' ] = 'select_horizontal',
 		[ 'v' ] = 'select_vertical',
 		[ 't' ] = 'select_tab',
+		[ 'e' ] = action_layout.toggle_preview,
+		[ '<C-k>' ] = action.preview_scrolling_up,
+		[ '<C-j>' ] = action.preview_scrolling_down,
 	}
 }
 
@@ -24,13 +31,16 @@ local customConfig = {
   defaults = {
     -- 打开弹窗后进入的初始模式，默认为 insert，也可以是 normal
     initial_mode = "insert",
-		selection_caret = "   ",
-		prompt_prefix = '  ',
+		selection_caret = "",
+		prompt_prefix = '   ',
+		results_title = '~ Result ~',
 		layout_strategy = "horizontal",
-		sorting_strategy = "ascending",
+		sorting_strategy = "descending",
 		border = true,
     -- 窗口内快捷键
     mappings = telescopeList,
+
+		file_previewer = require('telescope.previewers').vim_buffer_cat.new
   },
   pickers = {
     -- 内置 pickers 配置

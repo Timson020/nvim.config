@@ -4,35 +4,6 @@ if not status then
   return
 end
 
--- 列表操作快捷键
--- local list_keys = require('keybindings').nvimTreeList
-
--- vim.g.nvim_tree_indent_markers = 1
--- vim.g.nvim_tree_icon_padding = '  '
--- vim.g.nvim_tree_icons = {
---   default = "",
--- 	symlink = "",
---   git = {
--- 		unstaged = "✗",
---     staged = "✓",
---   	unmerged = "",
---     renamed = "➜",
---     untracked = "★",
---     deleted = "",
---     ignored = "◌",
---   },
---   folder = {
---   	arrow_open = "  ",
---     arrow_closed = "  ",
---     default = "   ",
---     open = "   ",
---     empty = "   ",
---     empty_open = "   ",
---     symlink = "   ",
---     symlink_open = "   ",
---   }
--- }
-
 local list_keys = {
 	-- 打开文件或文件夹
   { key = {"e", "<CR>"}, action = "edit" },
@@ -75,7 +46,7 @@ nvim_tree.setup({
   	},
 		renderer = {
 			indent_markers = {
-        enable = false,
+        enable = true,
         inline_arrows = true,
         icons = {
           corner = "└",

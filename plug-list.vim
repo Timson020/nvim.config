@@ -2,9 +2,8 @@
 call plug#begin()
 
 " 配色方案
-Plug 'titanzero/zephyrium'
-Plug 'glepnir/zephyr-nvim'
 Plug 'mhartington/oceanic-next'
+Plug 'folke/tokyonight.nvim'
 " Plug 'RRethy/nvim-base16'
 
 " 开始页面
@@ -28,7 +27,6 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
 " Git
-" Plug 'airblade/vim-gitgutter'
 Plug 'lewis6991/gitsigns.nvim'
 
 " 文件搜索插件
@@ -50,13 +48,16 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
 " 支持css/sass/less/html颜色显示
-Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " 彩虹括号显示
 Plug 'luochen1990/rainbow'
 
 " python virtualenv
 Plug 'jmcantrell/vim-virtualenv'
+
+"
+Plug 'voldikss/vim-floaterm'
 
 " 多语言语法高亮
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

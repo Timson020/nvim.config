@@ -1,5 +1,5 @@
--- local colorscheme = "zephyrium"
-local colorscheme = "OceanicNext"
+-- local colorscheme = "OceanicNext"
+local colorscheme = 'tokyonight'
 -- local colorscheme = "base16-tokyo-night-dark"
 -- local colorscheme = "base16-atelier-dune"
 -- local colorscheme = "base16-atelier-lakeside"
