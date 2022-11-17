@@ -56,8 +56,11 @@ Plug 'luochen1990/rainbow'
 " python virtualenv
 Plug 'jmcantrell/vim-virtualenv'
 
-"
+" 弹窗
 Plug 'voldikss/vim-floaterm'
+
+" 多选修改
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " 多语言语法高亮
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
