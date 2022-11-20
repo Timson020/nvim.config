@@ -46,4 +46,4 @@ nmap <silent> mm <leader>c<space>
 " 显示文件目录
 " 插件名     Shougo/defx.nvim
 " nmap <silent> <LocalLeader>f :Defx<cr>
-nmap <silent> <LocalLeader>t :NvimTreeToggle<cr>
+nmap <silent> <LocalLeader>e :NvimTreeToggle<cr>
