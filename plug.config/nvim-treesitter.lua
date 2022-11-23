@@ -43,6 +43,11 @@ treesitter.setup({
 			enable_autocmd = false
 		}
   },
+
+	-- 缩紧
+	indent = {
+		enable = true
+	}
 })
 
 vim.opt.foldmethod = 'expr'
