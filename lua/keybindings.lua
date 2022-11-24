@@ -35,7 +35,7 @@ M.floaterm = function ()
 	vim.g.floaterm_keymap_toggle = '<c-\\>'
   map('n', '<LocalLeader>tn', ':FloatermToggle --autoclose=2<CR>')
   map('n', '<LocalLeader>tg', ':FloatermNew --height=0.99 --width=0.99 --autoclose=2 lazygit<CR>')
-  map('n', '<LocalLeader>tr', ':FloatermNew --height=0.99 --width=0.99 --autoclose=2 ranger<CR>')
+  -- map('n', '<LocalLeader>tr', ':FloatermNew --height=0.99 --width=0.99 --autoclose=2 ranger<CR>')
 end
 
 return M
