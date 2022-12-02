@@ -4,6 +4,9 @@ call plug#begin()
 " 配色方案
 Plug 'mhartington/oceanic-next'
 Plug 'folke/tokyonight.nvim'
+" Plug 'bluz71/vim-moonfly-colors'
+" Plug 'bluz71/vim-nightfly-colors'
+" Plug 'EdenEast/nightfox.nvim'
 " Plug 'RRethy/nvim-base16'
 
 " 开始页面

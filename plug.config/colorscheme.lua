@@ -1,5 +1,6 @@
 -- local colorscheme = "OceanicNext"
 local colorscheme = 'tokyonight'
+-- local colorscheme = 'moonfly'
 -- local colorscheme = "base16-tokyo-night-dark"
 -- local colorscheme = "base16-atelier-dune"
 -- local colorscheme = "base16-atelier-lakeside"
