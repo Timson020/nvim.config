@@ -57,7 +57,7 @@ nvim_tree.setup({
       },
 			icons = {
 				webdev_colors = true,
-				padding = "  ",
+				padding = " ",
 				show = {
           file = true,
           folder = true,
