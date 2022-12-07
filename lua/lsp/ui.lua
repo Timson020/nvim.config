@@ -105,7 +105,7 @@ lspsaga.setup {
   },
   server_filetype_map = {},
   diagnostic_prefix_format = "%d. ",
-  diagnostic_message_format = "%m %c",
+  diagnostic_message_format = "%c %m",
   highlight_prefix = false,
 }
 
