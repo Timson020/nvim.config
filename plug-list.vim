@@ -32,7 +32,7 @@ Plug 'nvim-lualine/lualine.nvim'
 " Git
 Plug 'lewis6991/gitsigns.nvim'
 
-" TODO Plugin
+" todo Plugin
 Plug 'folke/todo-comments.nvim'
 
 " 文件搜索插件

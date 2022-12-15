@@ -17,7 +17,7 @@ local customConfig = {
       -- signs = false, -- configure signs for some keywords individually
     },
     TODO = { icon = " ", color = "info" },
-    HACK = { icon = " ", color = "warning" },
+    HACK = { icon = " ", color = "hack" },
     WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
     PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
     NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
@@ -39,7 +39,7 @@ local customConfig = {
     before = "", -- "fg" or "bg" or empty
     keyword = "wide", -- "fg", "bg", "wide", "wide_bg", "wide_fg" or empty. (wide and wide_bg is the same as bg, but will also highlight surrounding characters, wide_fg acts accordingly but with fg)
     after = "fg", -- "fg" or "bg" or empty
-    pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlightng (vim regex)
+    pattern = [[.*<(KEYWORDS)\s*]], -- pattern or table of patterns, used for highlightng (vim regex)
     comments_only = true, -- uses treesitter to match keywords in comments only
     max_line_len = 400, -- ignore lines longer than this
     exclude = {}, -- list of file types to exclude highlighting
@@ -47,12 +47,14 @@ local customConfig = {
   -- list of named colors where we try to extract the guifg from the
   -- list of highlight groups or use the hex color if hl not found as a fallback
   colors = {
-    error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+    info = { "DiagnosticInfo", "#2196f3" },
     warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-    info = { "DiagnosticInfo", "#2563EB" },
+		hack = { "DiagnosticWarn", "WarningMsg", "#ff9800" },
+    error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
     hint = { "DiagnosticHint", "#10B981" },
     default = { "Identifier", "#7C3AED" },
-    test = { "Identifier", "#FF00FF" }
+		pink = { "Identifier", "#e91e63" },
+    test = { "Identifier", "#9c27b0" }
   },
   search = {
     command = "rg",
@@ -65,7 +67,7 @@ local customConfig = {
     },
     -- regex that will be used to match keywords.
     -- don't replace the (KEYWORDS) placeholder
-    pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+    pattern = [[\b(KEYWORDS)]], -- ripgrep regex
     -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
   },
 }
