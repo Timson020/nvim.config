@@ -70,5 +70,5 @@ local customConfig = {
   },
 }
 
--- todo_comment.setup(customConfig)
+todo_comment.setup(customConfig)
 
