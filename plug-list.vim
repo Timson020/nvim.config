@@ -14,9 +14,9 @@ Plug 'glepnir/dashboard-nvim'
 
 " 显示页面当前选择的单词
 Plug 'itchyny/vim-cursorword'
-" 缩紧引导线
+" 缩进引导线
 Plug 'lukas-reineke/indent-blankline.nvim'
-" 缩紧
+" 缩进
 Plug 'kevinhwang91/nvim-ufo'
 Plug 'kevinhwang91/promise-async'
 
@@ -53,11 +53,11 @@ Plug 'akinsho/toggleterm.nvim'
 " 对齐插件
 Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
 
-" 支持css/sass/less/html颜色显示
+" 颜色显示
 Plug 'norcalli/nvim-colorizer.lua'
 
 " 彩虹括号显示
-Plug 'luochen1990/rainbow'
+" Plug 'luochen1990/rainbow'
 
 " python virtualenv
 Plug 'jmcantrell/vim-virtualenv'
