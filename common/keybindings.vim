@@ -39,10 +39,6 @@ nmap <silent> <LocalLeader>r :SymbolsOutline<cr>
 " nmap <silent> <LocalLeader>an :ALENext<cr>
 " nmap <silent> <LocalLeader>ap :ALEPrevious<cr>
 
-" 注释工具
-" 插件名     vim-scripts/The-NERD-Commenter
-nmap <silent> mm <leader>c<space>
-
 " 显示文件目录
 " 插件名     Shougo/defx.nvim
 " nmap <silent> <LocalLeader>f :Defx<cr>

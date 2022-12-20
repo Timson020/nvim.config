@@ -1,4 +1,4 @@
-" TODO 插件开始
+" NOTE 插件开始
 call plug#begin()
 
 " 配色方案
@@ -42,7 +42,7 @@ Plug 'BurntSushi/ripgrep'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 " 注释工具
-Plug 'vim-scripts/The-NERD-Commenter'
+Plug 'numToStr/Comment.nvim'
 
 " 函数 类名 拓展栏
 Plug 'simrat39/symbols-outline.nvim'
@@ -98,5 +98,5 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'onsails/lspkind-nvim'
 Plug 'tami5/lspsaga.nvim'
 
-" TODO 插件结束
+" NOTE 插件结束
 call plug#end()
