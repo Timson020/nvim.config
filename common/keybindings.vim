@@ -28,7 +28,7 @@ nmap <silent> <LocalLeader>ff :Telescope find_files<cr>
 nmap <silent> <LocalLeader>fw :Telescope live_grep<cr>
 nmap <silent> <LocalLeader>git :Telescope git_files<cr>
 nmap <silent> <LocalLeader>buf :Telescope buffers<cr>
-" nmap <silent> <LocalLeader>clap :<C-u>Clap<cr>
+nmap <silent> <C-q> :Bdelete!<cr>
 
 " 打开tagbar
 " 插件名     simrat39/symbols-outline.nvim

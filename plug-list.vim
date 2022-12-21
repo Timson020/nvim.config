@@ -40,6 +40,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
+Plug 'moll/vim-bbye'
 
 " 注释工具
 Plug 'numToStr/Comment.nvim'
