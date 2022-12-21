@@ -17,7 +17,7 @@ local opts = {
 		---Line-comment toggle keymap
 		line = 'mm',
 		---Block-comment toggle keymap
-		block = 'nn',
+		block = 'gnn',
 	},
 	---LHS of operator-pending mappings in NORMAL and VISUAL mode
 	opleader = {
