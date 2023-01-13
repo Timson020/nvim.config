@@ -11,6 +11,10 @@ M.common = function ()
 	-- nmap <silent> <C-s> :w<cr>
 	map('n', '<C-s>', ':w<CR>')
 
+	-- 缩进
+	-- map('v', '<LocalLeader>]', ':1><CR>')
+	-- map('v', '<LocalLeader>[', ':1<<CR>')
+
 	-- 新开标签页
 	-- nmap <silent> <C-t> :tabnew<cr>
 	-- nmap <silent> <LocalLeader>q :tabnext<cr>
