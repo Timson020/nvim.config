@@ -51,9 +51,6 @@ Plug 'simrat39/symbols-outline.nvim'
 " 命令行
 Plug 'akinsho/toggleterm.nvim'
 
-" 对齐插件
-Plug 'junegunn/vim-easy-align', { 'on': 'EasyAlign' }
-
 " 颜色显示
 Plug 'norcalli/nvim-colorizer.lua'
 
