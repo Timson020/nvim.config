@@ -1,0 +1,114 @@
+# 自动刷新
+live_config_reload: true
+# Tab 缩进
+tabspaces: 2
+
+shell:
+  program: /bin/zsh
+  # windows
+  # program: c:\windows\system32\windowspowershell\v1.0\powershell.exe
+  args:
+    # login
+    - -l
+
+env:
+  TERM: xterm-256color
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 10
+
+mouse:
+  hide_when_typing: true
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+window:
+  # 窗口大小
+  dimensions:
+    columns: 120
+    lines: 60
+
+  # 边缘空白
+  padding:
+    x: 0
+    y: 0
+
+  # 背景透明度
+  opacity: 0.9
+
+  dynamic_padding: false
+  startup_mode: Maximized
+  # 窗口修饰
+  # - full: 有边界 + 标题栏
+  # - none: 无边界 + 标题栏
+  decorations: full
+
+scrolling:
+  # 历史保留行数
+  history: 2000
+
+  # 每次滚动行数
+  multiplier: 20
+
+  # 每次滚动行数（分屏时）
+  faux_multiplier: 100
+
+  # 自动滚动至最新行
+  auto_scroll: true
+
+key_bindings:
+  # ----- new pane/tab/window -----
+  - { key: D, mods: Command, chars: "\x1c\"" }
+  # new vertical pane with default shell
+  - { key: D, mods: Command|Shift, chars: "\x1c-" }
+  # new vertical pane with commands menu
+  # - { key: Return,   mods: Command,       chars: "\x1c%"    } # new horizontal pane with default shell
+  # - { key: Return,   mods: Command|Shift, chars: "\x1c|"    } # new horizontal pane with commands menu
+  - { key: T, mods: Command, chars: "\x1cc" }
+  # new tab with default shell
+  - { key: T, mods: Command|Shift, chars: "\x1cC" }
+  # new tab with commands menu
+  # - { key: N,        mods: Command,       chars: "\x1cS"    } # switch session in current window with local sessions menu
+  # - { key: N,        mods: Command|Shift, command: { program: "/usr/local/bin/alacritty", args: ["msg", "create-window", "-e", "/bin/zsh", "--login"] } } # open session in new window with all sessions menu across servers
+colors:
+  name: Atelierlakeside (dark)
+  author: Chris Kempson
+  primary:
+    background: "#161b1d"
+    foreground: "#7ea2b4"
+  cursor:
+    text: "#161b1d"
+    cursor: "#7ea2b4"
+  normal:
+    black: "#161b1d"
+    red: "#d22d72"
+    green: "#568c3b"
+    yellow: "#8a8a0f"
+    blue: "#257fad"
+    magenta: "#5d5db1"
+    cyan: "#2d8f6f"
+    white: "#7ea2b4"
+  bright:
+    black: "#5a7b8c"
+    red: "#d22d72"
+    green: "#568c3b"
+    yellow: "#8a8a0f"
+    blue: "#257fad"
+    magenta: "#5d5db1"
+    cyan: "#2d8f6f"
+    white: "#ebf8ff"
+theme: Atelierlakeside.dark
