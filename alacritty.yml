@@ -29,8 +29,12 @@ font:
     style: Bold Italic
   size: 10
 
+cursor:
+  style:
+    Beam
+
 mouse:
-  hide_when_typing: false
+  hide_when_typing: true
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -44,8 +48,8 @@ window:
 
   # 边缘空白
   padding:
-    x: 0
-    y: 0
+    x: 10
+    y: 30
 
   # 背景透明度
   opacity: 0.9
@@ -55,7 +59,7 @@ window:
   # 窗口修饰
   # - full: 有边界 + 标题栏
   # - none: 无边界 + 标题栏
-  decorations: full
+  decorations: transparent
 
 scrolling:
   # 历史保留行数
