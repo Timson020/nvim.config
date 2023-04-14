@@ -90,10 +90,10 @@ Plug 'hrsh7th/vim-vsnip'
 " 下面都是补全源
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
-" Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 " 片段补全源
-Plug 'rafamadriz/friendly-snippets'
+" Plug 'rafamadriz/friendly-snippets'
 " 补全美化
 Plug 'onsails/lspkind-nvim'
 Plug 'tami5/lspsaga.nvim'
