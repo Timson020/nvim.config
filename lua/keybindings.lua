@@ -50,6 +50,7 @@ M.common = function ()
 	map('n', '<LocalLeader>fw', ':Telescope live_grep<CR>')
 	map('n', '<LocalLeader>git', ':Telescope git_files<CR>')
 	map('n', '<LocalLeader>buf', ':Telescope buffers<CR>')
+	map('n', '<LocalLeader>todo', ':TodoTelescope<CR>')
 	map('n', '<C-q>', ':Bdelete<CR>')
 
 	-- 	" 打开tagbar

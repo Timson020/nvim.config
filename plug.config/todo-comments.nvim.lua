@@ -42,14 +42,23 @@ local customConfig = {
   -- list of named colors where we try to extract the guifg from the
   -- list of highlight groups or use the hex color if hl not found as a fallback
   colors = {
-    info = { "DiagnosticInfo", "#2196f3" },
-    warning = { "DiagnosticWarn", "WarningMsg", "#f44336" },
-		hack = { "DiagnosticWarn", "WarningMsg", "#e91e63" },
-    error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-    hint = { "DiagnosticHint", "#10B981" },
-    test = { "Identifier", "#9c27b0" },
-
-    default = { "Identifier", "#7C3AED" },
+		-- #2196f3
+		-- #00FF00	
+		-- #69e8bf
+		-- #f78279
+		-- #ffc0cb 
+		-- #e31159
+		-- #f3dd18
+		-- #9c27b0
+		-- #7C3AED
+		--
+    info = { "#2196f3" },
+    warning = { "#f3dd18" },
+    error = { "#e31159" },
+		hack = { "#f78279" },
+    hint = { "#69e8bf" },
+    test = { "#9c27b0" },
+    default = { "#00FF00" },
   },
   search = {
     command = "rg",
