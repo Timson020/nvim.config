@@ -16,8 +16,8 @@ local opts = {
 	},
 	handlers = {
 		-- 关闭与eslint重复的报错
-		['textDocument/publishDiagnostics'] = function()
-		end,
+		-- ['textDocument/publishDiagnostics'] = function()
+		-- end,
 	},
 }
 
