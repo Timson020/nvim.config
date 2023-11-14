@@ -9,6 +9,7 @@ local mason_lspconfig = require("mason-lspconfig")
 
 local list = require("lsp.list")
 local default_config = require("lsp.default_config")
+local dart_config = require("lsp.config.dartls")
 
 local alones = {}
 local servers = {}
@@ -33,6 +34,8 @@ for _, value in pairs(servers) do
 		lspconfig[value].setup(vim.tbl_deep_extend("force", default_config, config))
 	end
 end
+
+lspconfig.dartls.setup(dart_config)
 
 mason.setup({
 	ui = {
