@@ -2,6 +2,37 @@ live_config_reload = true
 # tabspaces = 2
 # theme = "Atelierlakeside.dark"
 
+[shell]
+args = ["-l"]
+program = "/bin/zsh"
+
+[cursor]
+style = "Beam"
+
+[env]
+TERM = "xterm-256color"
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "transparent"
+dynamic_padding = false
+opacity = 0.9
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 120
+lines = 60
+
+[window.padding]
+x = 10
+y = 30
+
 [colors]
 # author = "Chris Kempson"
 # name = "Atelierlakeside (dark)"
@@ -34,12 +65,6 @@ yellow = "#8a8a0f"
 background = "#161b1d"
 foreground = "#7ea2b4"
 
-[cursor]
-style = "Beam"
-
-[env]
-TERM = "xterm-256color"
-
 [font]
 size = 10
 
@@ -64,33 +89,8 @@ action = "CreateNewWindow"
 key = "T"
 mods = "Command"
 
-[mouse]
-hide_when_typing = true
-
 [scrolling]
 # auto_scroll = true
 # faux_multiplier = 100
 history = 2000
 multiplier = 20
-
-[selection]
-save_to_clipboard = true
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
-
-[shell]
-args = ["-l"]
-program = "/bin/zsh"
-
-[window]
-decorations = "transparent"
-dynamic_padding = false
-opacity = 0.9
-startup_mode = "Maximized"
-
-[window.dimensions]
-columns = 120
-lines = 60
-
-[window.padding]
-x = 10
-y = 30
