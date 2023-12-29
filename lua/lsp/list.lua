@@ -1,5 +1,5 @@
 local list = {
-	{ name = "sumneko_lua", path = "lua", alone = false },
+	{ name = "lua_ls", path = "lua", alone = false },
 	{ name = "dockerls", path = "docker", alone = false },
 	{ name = "clangd", path = "c", alone = false },
 	{ name = "golangci_lint_ls", path = "go", alone = false },

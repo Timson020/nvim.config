@@ -10,7 +10,7 @@ Plug 'folke/tokyonight.nvim'
 " Plug 'RRethy/nvim-base16'
 
 " 开始页面
-Plug 'glepnir/dashboard-nvim'
+Plug 'nvimdev/dashboard-nvim'
 
 " 显示页面当前选择的单词
 Plug 'itchyny/vim-cursorword'
@@ -21,9 +21,9 @@ Plug 'kevinhwang91/nvim-ufo'
 Plug 'kevinhwang91/promise-async'
 
 " 图标
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 " 文件系统插件
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-tree/nvim-tree.lua'
 " 顶部标签页
 Plug 'akinsho/bufferline.nvim'
 " 底部信息栏
