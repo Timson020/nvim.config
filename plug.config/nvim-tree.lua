@@ -4,40 +4,35 @@ if not status then
   return
 end
 
-local list_keys = {
-	-- 打开文件或文件夹
-  { key = {"e", "<CR>"}, action = "edit" },
-  -- 分屏打开文件
-  { key = "v", action = "vsplit" },
-  { key = "h", action = "split" },
-  { key = "t", action = "tabnew" },
-  -- 显示隐藏文件
-  { key = "i", action = "toggle_ignored" }, -- Ignore (node_modules)
-  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
-  -- 文件操作
-  { key = "<F5>", action = "refresh" },
-  { key = "n", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "m", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-	{ key = "<Tab>", action = "preview" },
-}
+local function attachFn(bufnr)
+  local api = require "nvim-tree.api"
 
--- local funciton attchMap(bufnr)
--- 	local api = require "nvim-tree.api"
--- 	local function opts(desc)
--- 		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
--- 	end
--- 
--- 	-- default mappings
--- 	api.config.mappings.default_on_attach(bufnr)
--- 
--- 	-- custom mappings
--- 	vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent,        opts('Up'))
--- 	vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
--- end
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  -- api.config.mappings.default_on_attach(bufnr)
+
+  -- custom mappings
+  vim.keymap.set('n', '<CR>', api.tree.change_root_to_node,   opts('Enter'))
+  vim.keymap.set('n', 'e', api.node.open.edit,                opts('Open'))
+  vim.keymap.set('n', '<Tab>', api.node.open.preview,         opts('Preview'))
+	vim.keymap.set('n', 't', api.node.open.tab,                 opts('Tab'))
+  vim.keymap.set('n', 'v', api.node.open.vertical,            opts('Vertical'))
+  vim.keymap.set('n', 'h', api.node.open.horizontal,          opts('Horizontal'))
+
+  vim.keymap.set('n', '.', api.tree.toggle_hidden_filter,     opts('Dot file'))
+  vim.keymap.set('n', 'i', api.tree.toggle_gitignore_filter,  opts('Ignore file'))
+
+  vim.keymap.set('n', 'n', api.fs.create,                     opts('Create'))
+  vim.keymap.set('n', 'd', api.fs.remove,                     opts('Delete'))
+  vim.keymap.set('n', 'r', api.fs.rename_basename,            opts('Rename'))
+  vim.keymap.set('n', 'm', api.fs.cut,                        opts('Cut'))
+  vim.keymap.set('n', 'c', api.fs.copy.node,                  opts('Copy'))
+  vim.keymap.set('n', 'p', api.fs.paste,                      opts('Paste'))
+  vim.keymap.set('n', 'C', api.fs.copy.filename,              opts('Copy Name'))
+end
 
 nvim_tree.setup({
 		view = {
@@ -97,6 +92,7 @@ nvim_tree.setup({
 				}
 			}
 		},
+		on_attach = attachFn,
 		-- 不显示 git 状态图标
     git = {
     	enable = true,
