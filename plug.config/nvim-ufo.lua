@@ -28,7 +28,7 @@ local bufnr = vim.api.nvim_get_current_buf()
 
 local handler = function(virtText, lnum, endLnum, width, truncate)
     local newVirtText = {}
-    local suffix = ('  %d '):format(endLnum - lnum)
+    local suffix = ('  %d '):format(endLnum - lnum)
     local sufWidth = vim.fn.strdisplaywidth(suffix)
     local targetWidth = width - sufWidth
     local curWidth = 0
@@ -54,6 +54,7 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
     return newVirtText
 end
 ufoPlugIn.setup({
+	enable_get_fold_virt_text = true,
 	open_fold_hl_timeout = 150,
 	fold_virt_text_handler = handler,
 	close_fold_kinds = {'imports', 'comment'},

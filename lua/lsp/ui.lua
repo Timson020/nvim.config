@@ -34,13 +34,13 @@ lspkind.init({
       Method = "",
       Function = "󰡱",
       Constructor = "",
-      Field = "ﰠ",
+      Field = "󰜢",
       Variable = "",
-      Class = "ﴯ",
+      Class = "󰠱",
       Interface = "",
       Module = "",
-      Property = "ﰠ",
-      Unit = "󰫧",
+      Property = "󰜢",
+      Unit = "󰑭",
       Value = "󰌹",
       Enum = "",
       Keyword = "",
@@ -53,8 +53,8 @@ lspkind.init({
       Constant = "",
       Struct = "פּ",
       Event = "",
-      Operator = "󱖦 ",
-      TypeParameter = ""
+      Operator = "󰆕 ",
+      TypeParameter = " "
     },
 })
 
@@ -70,15 +70,15 @@ lspsaga.setup {
   infor_sign = "",
   diagnostic_header_icon = "   ",
   -- code action title icon
-  code_action_icon = " ",
+  code_action_icon = " ",
   code_action_prompt = {
     enable = true,
     sign = true,
     sign_priority = 40,
     virtual_text = true,
   },
-  finder_definition_icon = "  ",
-  finder_reference_icon = "  ",
+  finder_definition_icon = " ",
+  finder_reference_icon = " ",
   max_preview_lines = 10,
   finder_action_keys = {
     open = "<CR>",
@@ -96,7 +96,7 @@ lspsaga.setup {
     quit = "<ESC>",
     exec = "<CR>",
   },
-  definition_preview_icon = "  ",
+  definition_preview_icon = "  ",
   border_style = "single",
   rename_prompt_prefix = "➤",
   rename_output_qflist = {

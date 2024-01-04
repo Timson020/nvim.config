@@ -89,7 +89,7 @@ end
 
 ins_left {
   function()
-    return '▊'
+    return '▊ '
   end,
   color = { fg = colors.blue }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
@@ -98,7 +98,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return '󰱯 '
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -130,15 +130,15 @@ ins_left {
 }
 
 ins_left {
-  -- filesize component
-  'filesize',
-  cond = conditions.buffer_not_empty,
-}
-
-ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = 'bold' },
+}
+
+ins_left {
+  -- filesize component
+  'filesize',
+  cond = conditions.buffer_not_empty,
 }
 
 ins_left { 'location' }
@@ -220,7 +220,7 @@ ins_right {
 
 ins_right {
   function()
-    return '  '
+    return ' ▊'
   end,
   color = { fg = colors.blue },
   padding = { left = 1 },
