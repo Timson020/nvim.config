@@ -47,6 +47,7 @@ nvim_tree.setup({
       signcolumn = 'yes',
   	},
 		renderer = {
+			root_folder_label = ":~:s?$?/",
 			indent_markers = {
         enable = true,
         inline_arrows = true,
@@ -58,7 +59,16 @@ nvim_tree.setup({
         },
       },
 			icons = {
-				webdev_colors = true,
+				web_devicons = {
+          file = {
+            enable = true,
+            color = false,
+          },
+          folder = {
+            enable = true,
+            color = false,
+          },
+        },
 				padding = " ",
 				show = {
           file = true,
@@ -90,7 +100,7 @@ nvim_tree.setup({
 						ignored = "◌",
 					},
 				}
-			}
+			},
 		},
 		on_attach = attachFn,
 		-- 不显示 git 状态图标
