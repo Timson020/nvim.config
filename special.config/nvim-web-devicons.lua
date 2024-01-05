@@ -11,27 +11,44 @@ local imageFolder = {
 	name = "image"
 }
 
+local distFolder = {
+	icon = "󱃬",
+	color = "#607d8b",
+	name = "dist"
+}
+
+local testFolder = {
+	icon = "",
+	color = "#f443ee",
+	name = "test"
+}
+
 local overrideType = {
 	tsx = {
-			icon = "󰜈",
-			color = "#f44336",
-			name = "Tsx"
-		},
-		ts = {
-			icon = "",
-			color = "#00bcd4",
-			name = "Ts"
-		},
-		js = {
-			icon = "",
-			color = "#f0d809",
-			name = "Js"
-		},
-		vue = {
-			icon = "󰹭",
-			color = "#7bd88f",
-			name = "Vue"
-		}
+		icon = "󰜈",
+		color = "#f44336",
+		name = "Tsx"
+	},
+	ts = {
+		icon = "",
+		color = "#00bcd4",
+		name = "Ts"
+	},
+	js = {
+		icon = "",
+		color = "#f0d809",
+		name = "Js"
+	},
+	vue = {
+		icon = "󰹭",
+		color = "#7bd88f",
+		name = "Vue"
+	},
+	json = {
+		icon = "󰘦",
+		color = "#f0d809",
+		name = "Json"
+	}
 }
 
 local overrideMap = {
@@ -92,16 +109,8 @@ local overrideMap = {
 		name = "electron"
 	},
 
-	["__tests__"] = {
-		icon = "",
-		color = "#f443ee",
-		name = "__tests__"
-	},
-	["test"] = {
-		icon = "",
-		color = "#f443ee",
-		name = "__tests__"
-	},
+	["test"] = testFolder,
+	["__tests__"] = testFolder,
 
 	["image"] = imageFolder,
 	["images"] = imageFolder,
@@ -110,16 +119,9 @@ local overrideMap = {
 	["icon"] = imageFolder,
 	["icons"] = imageFolder,
 
-	["dist"] = {
-		icon = "󱃬",
-		color = "#607d8b",
-		name = "dist"
-	},
-	["dist-electron"] = {
-		icon = "󱃬",
-		color = "#607d8b",
-		name = "dist"
-	},
+	["dist"] = distFolder,
+	["dist-electron"] = distFolder,
+
 	["node_modules"] = {
 		icon = "󰎙",
 		color = "#25dea7",
