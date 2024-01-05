@@ -62,11 +62,11 @@ nvim_tree.setup({
 				web_devicons = {
           file = {
             enable = true,
-            color = false,
+            color = true,
           },
           folder = {
             enable = true,
-            color = false,
+            color = true,
           },
         },
 				padding = " ",
@@ -116,7 +116,7 @@ nvim_tree.setup({
     -- 隐藏 .文件 和 node_modules 文件夹
     filters = {
       dotfiles = false,
-      custom = { 'node_modules' },
+      custom = {},
     },
 		diagnostics = {
     	enable = false,

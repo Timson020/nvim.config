@@ -87,6 +87,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " endfunction
 
 exe 'source ~/.config/nvim/plug-list.vim'
+exe 'source ~/.config/nvim/special.config/nvim-web-devicons.lua'
 
 lua require('lsp.setup')
 
