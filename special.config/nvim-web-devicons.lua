@@ -68,6 +68,12 @@ local overrideMap = {
 		name = ".github"
 	},
 
+	["build"] = {
+		icon = "",
+		color = "#795548",
+		name = "build"
+	},
+
 	["src"] = {
 		icon = "",
 		color = "#f44336",
