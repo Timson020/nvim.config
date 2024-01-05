@@ -29,6 +29,11 @@ local overrideType = {
 		color = "#f44336",
 		name = "Tsx"
 	},
+	vue = {
+		icon = "󰹭",
+		color = "#7bd88f",
+		name = "Vue"
+	},
 	ts = {
 		icon = "",
 		color = "#00bcd4",
@@ -38,11 +43,6 @@ local overrideType = {
 		icon = "",
 		color = "#f0d809",
 		name = "Js"
-	},
-	vue = {
-		icon = "󰹭",
-		color = "#7bd88f",
-		name = "Vue"
 	},
 	json = {
 		icon = "󰘦",
@@ -130,11 +130,11 @@ local overrideMap = {
 }
 
 icon.setup {
+	default = false,
+	color_icons = true,
+	strict = true,
 	override = overrideType,
 	override_by_filename = overrideMap,
 	-- override_by_extension = overrideMap
-	default = false,
-	color_icons = true,
-	strict = true
 }
 
