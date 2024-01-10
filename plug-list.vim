@@ -12,6 +12,9 @@ Plug 'folke/tokyonight.nvim'
 " 开始页面
 Plug 'nvimdev/dashboard-nvim'
 
+" vim 屏保
+" Plug 'tamton-aquib/zone.nvim'
+
 " 显示页面当前选择的单词
 Plug 'itchyny/vim-cursorword'
 " 缩进引导线
