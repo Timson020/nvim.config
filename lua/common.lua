@@ -1,5 +1,8 @@
 local set = vim.opt
 
+-- 设置leader键
+vim.g.maplocalleader = ';'
+
 -- 设置编码
 set.encoding='utf-8'
 -- 显示行数
