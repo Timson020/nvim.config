@@ -17,6 +17,8 @@ local tree = require('plugin_config.nvim-tree')
 local telescope = require('plugin_config.telescope_nvim')
 -- git
 local gitsigns = require('plugin_config.gitsigns')
+--
+local colorscheme = require('plugin_config.change_color')
 
 -- INFO
 -- 注释相关
@@ -76,6 +78,7 @@ lazy.setup({
 	bufferline,
 	lualine,
 	tree,
+	colorscheme,
 
 	mason,
 	treesitter,

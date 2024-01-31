@@ -62,6 +62,12 @@ M.common = function ()
 end
 
 --
+M.color = function ()
+	map('n', '<C-p>', ':PreviousColorScheme<CR>')
+	map('n', '<C-n>', ':NextColorScheme<CR>')
+end
+
+--
 M.treesitter = function(mapBuf)
 	local opt = { noremap = true, silent = true }
 	-- rename
