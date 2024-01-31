@@ -1,5 +1,7 @@
 local set = vim.opt
 
+-- vim.
+
 -- 设置leader键
 vim.g.maplocalleader = ';'
 
@@ -30,7 +32,8 @@ set.conceallevel = 1
 -- 
 set.wildignore = '*/.git/*,*/.hg/*,*/.svn/*'
 -- 
-set.bg = 'dark'
+-- set.bg = 'dark'
+-- set.background = 'dark'
 -- 
 set.termguicolors = true
 -- set.t_Co = 259

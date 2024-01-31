@@ -4,7 +4,6 @@
 --   return
 -- end
 
-local hooks = require "ibl.hooks"
 
 local highlight = {
   "RainbowRed",
@@ -25,8 +24,6 @@ local function hookFn()
 	vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
 	vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 end
-
-hooks.register(hooks.type.HIGHLIGHT_SETUP, hookFn)
 
 local config = {
 	indent = {
@@ -56,6 +53,8 @@ local M = {
 	'lukas-reineke/indent-blankline.nvim',
 	config = function()
 		local ibl = require('ibl')
+		local hooks = require "ibl.hooks"
+		hooks.register(hooks.type.HIGHLIGHT_SETUP, hookFn)
 		ibl.setup(config)
 	end
 }

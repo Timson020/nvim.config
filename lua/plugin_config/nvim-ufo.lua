@@ -1,28 +1,13 @@
-local status, ufoPlugIn = pcall(require, "ufo")
-if not status then
-  vim.notify("没有找到 ufo")
-  return
-end
+-- local status, ufoPlugIn = pcall(require, "ufo")
+-- if not status then
+--   vim.notify("没有找到 ufo")
+--   return
+-- end
 
 vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-
-vim.keymap.set('n', 'zR', ufoPlugIn.openAllFolds)
-vim.keymap.set('n', 'zM', ufoPlugIn.closeAllFolds)
-vim.keymap.set('n', 'zr', ufoPlugIn.openFoldsExceptKinds)
-vim.keymap.set('n', 'zm', ufoPlugIn.closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
-vim.keymap.set('n', 'K', function()
-  local winid = ufoPlugIn.peekFoldedLinesUnderCursor()
-  if not winid then
-    -- choose one of them
-    -- coc.nvim
-    vim.fn.CocActionAsync('definitionHover')
-    -- nvimlsp
-    vim.lsp.buf.hover()
-  end
-end)
 
 local bufnr = vim.api.nvim_get_current_buf()
 
@@ -54,7 +39,7 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
     return newVirtText
 end
 
-ufoPlugIn.setup({
+local config = {
 	enable_get_fold_virt_text = true,
 	open_fold_hl_timeout = 150,
 	fold_virt_text_handler = handler,
@@ -73,5 +58,32 @@ ufoPlugIn.setup({
   provider_selector = function()
     return {'treesitter', 'indent'}
   end
-})
-ufoPlugIn.setFoldVirtTextHandler(bufnr, handler)
+}
+
+local M = {
+	'kevinhwang91/nvim-ufo',
+	config = function ()
+		local ufo = require('ufo')
+		ufo.setup(config)
+		ufo.setFoldVirtTextHandler(bufnr, handler)
+
+		vim.keymap.set('n', 'zR', ufo.openAllFolds)
+		vim.keymap.set('n', 'zM', ufo.closeAllFolds)
+		vim.keymap.set('n', 'zr', ufo.openFoldsExceptKinds)
+		vim.keymap.set('n', 'zm', ufo.closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+		vim.keymap.set('n', 'K', function()
+			local winid = ufo.peekFoldedLinesUnderCursor()
+			if not winid then
+				-- choose one of them
+				-- coc.nvim
+				vim.fn.CocActionAsync('definitionHover')
+				-- nvimlsp
+				vim.lsp.buf.hover()
+			end
+		end)
+	end,
+	dependencies = { {'kevinhwang91/promise-async'} }
+}
+
+return M
+

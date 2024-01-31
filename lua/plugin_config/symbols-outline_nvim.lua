@@ -1,9 +1,3 @@
-local status, symbolOutline = pcall(require, "symbols-outline")
-if not status then
-  vim.notify("没有找到 symbols")
-  return
-end
-
 local opt = {
 	position = 'right',
 	show_guides = true,
@@ -60,7 +54,15 @@ local opt = {
 	},
 }
 
-symbolOutline.setup(opt)
+local M = {
+	'simrat39/symbols-outline.nvim',
+	config = function ()
+		local symbolOutline = require('symbols-outline')
+		symbolOutline.setup(opt)
+	end
+}
+
+return M
 
 -- vim.g.symbols_outline = {
 --     highlight_hovered_item = true,

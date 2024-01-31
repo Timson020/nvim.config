@@ -2,8 +2,6 @@
 local M = {}
 local map = vim.keymap.set
 
-vim.g.maplocalleader = ';'
-
 -- 默认常规快捷键 
 M.common = function ()
 	-- 保存

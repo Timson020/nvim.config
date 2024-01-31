@@ -1,8 +1,8 @@
-local status, colorizer = pcall(require, "colorizer")
-if not status then
-  vim.notify("没有找到 colorizer")
-  return
-end
+-- local status, colorizer = pcall(require, "colorizer")
+-- if not status then
+--   vim.notify("没有找到 colorizer")
+--   return
+-- end
 
 local options = {
 	'html',
@@ -16,6 +16,15 @@ local options = {
 	'vue',
 	'lua',
 }
-colorizer.setup(options, { mode = 'background' })
+
+local M = {
+	'norcalli/nvim-colorizer.lua',
+	config = function ()
+		require('colorizer').setup(options, { mode = 'background' })
+	end
+}
+
+return M
+-- colorizer.setup(options, )
 -- return vim.tbl_isempty(options.filetypes or {}) or vim.cmd([[do FileType]])
 
