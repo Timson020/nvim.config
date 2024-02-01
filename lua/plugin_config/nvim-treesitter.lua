@@ -1,11 +1,14 @@
-local status, treesitter = pcall(require, "nvim-treesitter.configs")
+-- local status, treesitter = pcall(require, "nvim-treesitter.configs")
+--
+-- if not status then
+-- 		vim.notify("没有找到 nvim-treesitter")
+-- 		return
+-- end
 
-if not status then
-		vim.notify("没有找到 nvim-treesitter")
-		return
-end
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
-treesitter.setup({
+local config = {
 	-- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
   ensure_installed = {
@@ -48,7 +51,14 @@ treesitter.setup({
 	indent = {
 		enable = true
 	}
-})
+}
 
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+local M = {
+	'nvim-treesitter/nvim-treesitter',
+	config = function()
+		local treesitter = require('nvim-treesitter.configs')
+		treesitter.setup(config)
+	end
+}
+
+return M

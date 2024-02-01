@@ -1,8 +1,8 @@
-local status, lualine = pcall(require, "lualine")
-if not status then
-  vim.notify("没有找到 lualine")
-  return
-end
+-- local status, lualine = pcall(require, "lualine")
+-- if not status then
+--   vim.notify("没有找到 lualine")
+--   return
+-- end
 
 -- Eviline config for lualine
 -- Author: shadmansaleh
@@ -227,4 +227,12 @@ ins_right {
 }
 
 -- Now don't forget to initialize lualine
-lualine.setup(config)
+-- lualine.setup(config)
+local M = {
+	'nvim-lualine/lualine.nvim',
+	config = function ()
+		require('lualine').setup(config)
+	end
+}
+
+return M

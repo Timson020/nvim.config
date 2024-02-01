@@ -1,11 +1,11 @@
-local status, todo_comment = pcall(require, "todo-comments")
+-- local status, todo_comment = pcall(require, "todo-comments")
+--
+-- if not status then
+--   vim.notify("没有找到 todo-comments")
+--   return
+-- end
 
-if not status then
-  vim.notify("没有找到 todo-comments")
-  return
-end
-
-local customConfig = {
+local config = {
   signs = true, -- show icons in the signs column
   sign_priority = 8, -- sign priority
   -- keywords recognized as todo comments
@@ -76,5 +76,13 @@ local customConfig = {
   },
 }
 
-todo_comment.setup(customConfig)
+local M = {
+	'folke/todo-comments.nvim',
+	config = function ()
+		local todo = require('todo-comments')
+		todo.setup(config)
+	end
+}
+
+return M
 

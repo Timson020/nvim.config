@@ -1,10 +1,9 @@
-local status, indent_blankline = pcall(require, "ibl")
-if not status then
-  vim.notify("没有找到 indent_blankline")
-  return
-end
+-- local status, indent_blankline = pcall(require, "ibl")
+-- if not status then
+--   vim.notify("没有找到 indent_blankline")
+--   return
+-- end
 
-local hooks = require "ibl.hooks"
 
 local highlight = {
   "RainbowRed",
@@ -26,9 +25,7 @@ local function hookFn()
 	vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 end
 
-hooks.register(hooks.type.HIGHLIGHT_SETUP, hookFn)
-
-indent_blankline.setup({
+local config = {
 	indent = {
 		highlight = highlight
 	},
@@ -50,5 +47,17 @@ indent_blankline.setup({
 			"toggleterm",
 		}
 	}
-})
+}
+
+local M = {
+	'lukas-reineke/indent-blankline.nvim',
+	config = function()
+		local ibl = require('ibl')
+		local hooks = require "ibl.hooks"
+		hooks.register(hooks.type.HIGHLIGHT_SETUP, hookFn)
+		ibl.setup(config)
+	end
+}
+
+return M
 

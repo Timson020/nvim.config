@@ -1,8 +1,8 @@
-local status, gitsigns = pcall(require, "gitsigns")
-if not status then
-  vim.notify("没有找到 gitsigns")
-  return
-end
+-- local status, gitsigns = pcall(require, "gitsigns")
+-- if not status then
+--   vim.notify("没有找到 gitsigns")
+--   return
+-- end
 
 local config = {
 	signs = {
@@ -20,4 +20,12 @@ local config = {
 	current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>'
 }
 
-gitsigns.setup(config)
+local M = {
+	'lewis6991/gitsigns.nvim',
+	config = function ()
+		require('gitsigns').setup(config)
+	end
+}
+
+return M
+

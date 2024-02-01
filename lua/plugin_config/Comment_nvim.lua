@@ -1,9 +1,9 @@
 -- local home = os.getenv('HOME')
-local status, comment = pcall(require, "Comment")
-if not status then
-	vim.notify("没有找到 comment")
-	return
-end
+-- local status, comment = pcall(require, "Comment")
+-- if not status then
+-- 	vim.notify("没有找到 comment")
+-- 	return
+-- end
 
 local opts = {
 	---Add a space b/w comment and the line
@@ -49,6 +49,11 @@ local opts = {
 	post_hook = nil,
 }
 
-comment.setup(opts)
+local M = {
+	'numToStr/Comment.nvim',
+	config = function()
+		require('Comment').setup(opts)
+	end
+}
 
-
+return M

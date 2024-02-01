@@ -1,10 +1,10 @@
-local status, bufferline = pcall(require, "bufferline")
-if not status then
-	vim.notify("没有找到 bufferline")
-	return
-end
+-- local status, bufferline = pcall(require, "bufferline")
+-- if not status then
+-- 	vim.notify("没有找到 bufferline")
+-- 	return
+-- end
 
-bufferline.setup({
+local config = {
   options = {
 		mode = "tabs",
 		separator_style = "padded_slant",
@@ -48,4 +48,14 @@ bufferline.setup({
       return s
     end,
   },
-})
+}
+
+local M = {
+	'akinsho/bufferline.nvim',
+	config = function ()
+		require('bufferline').setup(config)
+	end,
+
+}
+
+return M

@@ -1,9 +1,3 @@
-local status, icon = pcall(require, "nvim-web-devicons")
-
-if not status then
-	vim.notify("没找到 icon 配置库")
-	return
-end
 
 local imageFolder = {
 	icon = "󰉏",
@@ -135,7 +129,7 @@ local overrideMap = {
 	}
 }
 
-icon.setup {
+local config = {
 	default = false,
 	color_icons = true,
 	strict = true,
@@ -144,3 +138,12 @@ icon.setup {
 	-- override_by_extension = overrideMap
 }
 
+local M = {
+	'nvim-tree/nvim-web-devicons',
+	event = 'VimEnter',
+	config = function ()
+		require('nvim-web-devicons').setup(config)
+	end,
+}
+
+return M
