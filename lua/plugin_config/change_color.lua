@@ -6,7 +6,9 @@ local M = {
 		-- 主题文件可以查看 https://github.com/flazz/vim-colorschemes.git
 		local key = require('keybindings')
 		key.color()
-		pcall(vim.cmd, "colorscheme " .. 'habamax')
+		-- pcall(vim.cmd, "colorscheme " .. 'habamax')
+
+		vim.cmd("colorscheme solarized_dark")
 	end
 }
 

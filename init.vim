@@ -17,4 +17,4 @@ if has('clipboard')
 	set clipboard& clipboard+=unnamedplus
 endif
 
-exe 'source ./start.lua'
+exe 'source ~/.config/nvim/start.lua'
