@@ -63,8 +63,8 @@ end
 
 --
 M.color = function ()
-	map('n', '<C-p>', ':PreviousColorScheme<CR>')
-	map('n', '<C-n>', ':NextColorScheme<CR>')
+	map('n', '<LocalLeader>cp', ':PreviousColorScheme<CR>')
+	map('n', '<LocalLeader>cn', ':NextColorScheme<CR>')
 end
 
 --
