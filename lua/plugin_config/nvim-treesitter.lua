@@ -29,6 +29,7 @@ local config = {
 		"lua",
 		"go",
 		"python",
+		"prisma",
 		"dockerfile"
 	},
 
