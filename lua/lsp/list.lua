@@ -6,6 +6,7 @@ local list = {
 	{ name = "pyright", path = "python", alone = false },
 	{ name = "html", path = "html", alone = false },
 	{ name = "cssls", path = "css", alone = false },
+	{ name = "tailwindcss", path = "tailwindcss", alone = false },
 	{ name = "tsserver", path = "tsserver", alone = false },
 	{ name = "volar", path = "volar", alone = false },
 	{ name = "prismals", path = "prismals", alone = false }
