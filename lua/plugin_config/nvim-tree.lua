@@ -42,7 +42,7 @@ end
 local config = {
 	view = {
 		-- 宽度
-		width = 60,
+		width = 36,
 		-- 也可以 'right'
 		side = 'left',
 		-- 不显示行数
