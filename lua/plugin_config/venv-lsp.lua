@@ -1,9 +1,10 @@
 -- let g:virtualenv_stl_format = '[%n]'
 
 local M = {
-	'jmcantrell/vim-virtualenv',
+	'jglasovic/venv-lsp.nvim',
 	config = function ()
-		vim.g.virtualenv_stl_format = '[%n]'
+		local venv = require('venv-lsp')
+		venv.init()
 	end
 }
 

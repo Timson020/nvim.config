@@ -57,7 +57,7 @@ local symbol = require('plugin_config.symbols-outline_nvim')
 -- INFO
 
 -- python 虚拟环境
-local virtualenv = require('plugin_config.vim-virtualenv')
+local virtualenv = require('plugin_config.venv-lsp')
 
 -- INFO
 -- 语法相关
