@@ -57,7 +57,7 @@ local symbol = require('plugin_config.symbols-outline_nvim')
 -- INFO
 
 -- python 虚拟环境
-local virtualenv = require('plugin_config.venv-lsp')
+-- local virtualenv = require('plugin_config.venv-lsp')
 
 -- INFO
 -- 语法相关
@@ -85,11 +85,9 @@ lazy.setup({
 	gitsigns,
 	Comment,
 	todo,
-
-	virtualenv,
+	ufo,
 
 	cursorword,
-	ufo,
 	telescope,
 	toggleterm,
 	ibl,
