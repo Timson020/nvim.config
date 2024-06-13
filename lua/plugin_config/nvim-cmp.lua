@@ -96,7 +96,7 @@ local M = {
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-cmdline',
 		'onsails/lspkind-nvim',
-		'tami5/lspsaga.nvim'
+		'nvimdev/lspsaga.nvim'
 	}
 }
 
