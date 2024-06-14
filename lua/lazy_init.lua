@@ -64,9 +64,9 @@ local symbol = require('plugin_config.symbols-outline_nvim')
 
 -- 语法高亮
 local treesitter = require('plugin_config.nvim-treesitter')
--- LSP
+-- -- LSP
 local mason = require('plugin_config.mason_nvim')
--- 
+-- -- 
 local cmp = require('plugin_config.nvim-cmp')
 -- 
 local colorizer = require('plugin_config.nvim-colorizer')
@@ -78,22 +78,25 @@ lazy.setup({
 	bufferline,
 	lualine,
 	tree,
+	telescope,
+	gitsigns,
 	colorscheme,
 
-	mason,
-	treesitter,
-	gitsigns,
 	Comment,
 	todo,
-	ufo,
 
-	cursorword,
-	telescope,
-	toggleterm,
+	ufo,
 	ibl,
-	cmp,
-	colorizer,
-	symbol,
+	cursorword,
+	multi,
+
 	floaterm,
-	multi
+	toggleterm,
+
+	symbol,
+
+	treesitter,
+	mason,
+	cmp,
+	colorizer
 })
