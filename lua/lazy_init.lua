@@ -62,6 +62,8 @@ local symbol = require('plugin_config.symbols-outline_nvim')
 -- INFO
 -- 语法相关
 
+-- markdown
+local markdown = require('plugin_config.markdown_nvim')
 -- 语法高亮
 local treesitter = require('plugin_config.nvim-treesitter')
 -- -- LSP
@@ -95,6 +97,7 @@ lazy.setup({
 
 	symbol,
 
+	markdown,
 	treesitter,
 	mason,
 	cmp,
