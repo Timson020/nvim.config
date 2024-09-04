@@ -10,8 +10,6 @@ local list = {
 	{ name = "tsserver", path = "tsserver", alone = false },
 	{ name = "volar", path = "volar", alone = false },
 	{ name = "prismals", path = "prismals", alone = false }
-	-- { name = "eslint", path = "eslint", alone = false },
-	-- { name = "solang", path = "solidity", alone = false },
 }
 
 return list
