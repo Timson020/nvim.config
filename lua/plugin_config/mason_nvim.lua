@@ -40,7 +40,7 @@ local M = {
 
 		local list = require("lsp.list")
 		local default_config = require("lsp.default_config")
-		-- local dart_config = require("lsp.config.dartls")
+		local dart_config = require("lsp.config.dartls")
 
 		local alones = {}
 		local servers = {}
@@ -66,7 +66,7 @@ local M = {
 			end
 		end
 
-		-- lspconfig.dartls.setup(dart_config)
+		lspconfig.dartls.setup(dart_config)
 
 		mason.setup(masonConfig)
 
