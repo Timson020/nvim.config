@@ -5,19 +5,20 @@ local lazy = require('lazy')
 
 -- 图标插件
 local icon = require('plugin_config.nvim-web-devicons')
+-- git
+local gitsigns = require('plugin_config.gitsigns')
 -- 开始界面
 local dashboard = require('plugin_config.dashboard-nvim')
 -- buffer栏
 local bufferline = require('plugin_config.bufferline_nvim')
+-- TODO vim.lsp.get_active_clients() is deprecated
 -- 底部栏
 local lualine = require('plugin_config.lualine_nvim')
 -- 目录树
 local tree = require('plugin_config.nvim-tree')
 -- 查找
 local telescope = require('plugin_config.telescope_nvim')
--- git
-local gitsigns = require('plugin_config.gitsigns')
---
+-- 切换主题
 local colorscheme = require('plugin_config.change_color')
 
 -- INFO
@@ -31,13 +32,13 @@ local todo = require('plugin_config.todo-comments_nvim')
 -- 缩进显示
 -- 多选
 
--- 
+-- function 折叠
 local ufo = require('plugin_config.nvim-ufo')
 -- 缩进
 local ibl = require('plugin_config.indent-blankline_nvim')
--- 
+-- 聚焦当前所选单词
 local cursorword = require('plugin_config.cursorword')
---
+-- 多行选择, 多单词选择
 local multi = require('plugin_config.vim-visual-multi')
 
 -- INFO
@@ -51,13 +52,9 @@ local toggleterm = require('plugin_config.toggleterm_nvim')
 -- INFO
 -- 侧边栏
 
---
-local symbol = require('plugin_config.symbols-outline_nvim')
-
--- INFO
-
--- python 虚拟环境
--- local virtualenv = require('plugin_config.venv-lsp')
+-- TODO
+-- 没测试
+-- local symbol = require('plugin_config.symbols-outline_nvim')
 
 -- INFO
 -- 语法相关
@@ -66,11 +63,11 @@ local symbol = require('plugin_config.symbols-outline_nvim')
 local markdown = require('plugin_config.markdown_nvim')
 -- 语法高亮
 local treesitter = require('plugin_config.nvim-treesitter')
--- -- LSP
+-- LSP
 local mason = require('plugin_config.mason_nvim')
--- -- 
+-- 常用的LSP [增强mason lsp]
 local cmp = require('plugin_config.nvim-cmp')
--- 
+-- 显示颜色
 local colorizer = require('plugin_config.nvim-colorizer')
 
 
@@ -95,7 +92,7 @@ lazy.setup({
 	floaterm,
 	toggleterm,
 
-	symbol,
+	-- symbol,
 
 	markdown,
 	treesitter,

@@ -4,12 +4,12 @@ local masonConfig = {
 		height = 0.9,
 		icons = {
 			package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗",
+			package_pending = "➜",
+			package_uninstalled = "✗",
 		},
 		keymaps = {
 			-- Keymap to expand a package
-      toggle_package_expand = "<CR>",
+			toggle_package_expand = "<CR>",
 			-- Keymap to install the package under the current cursor position
 			install_package = "i",
 			-- Keymap to reinstall/update the package under the current cursor position
@@ -30,6 +30,21 @@ local masonConfig = {
 	}
 }
 
+-- 定义 lint 的快捷键
+local function attach(client, buf)
+	-- Disable the formatting function and leave it to a special plug-in plug-in for processing
+	-- 禁用格式化功能，交给专门插件插件处理
+	client.server_capabilities.documentFormattingProvider = false
+	client.server_capabilities.documentRangeFormattingProvider = false
+	local function buf_set_keymap(...)
+		vim.api.nvim_buf_set_keymap(buf, ...)
+	end
+
+	-- Bind shortcut keys
+	-- 绑定快捷键
+	require("keybindings").lsp(buf_set_keymap)
+end
+
 local M = {
 	'williamboman/mason.nvim',
 
@@ -38,57 +53,83 @@ local M = {
 		local lspconfig = require("lspconfig")
 		local mason_lsp = require('mason-lspconfig')
 
-		local list = require("lsp.list")
-		local default_config = require("lsp.default_config")
-		local dart_config = require("lsp.config.dartls")
-
-		local alones = {}
-		local servers = {}
-		local installServers = {}
-		local servers_handlers = {}
-
-		for _, ele in pairs(list) do
-			table.insert(installServers, ele.name)
-			if ele.alone then
-				table.insert(alones, ele.name)
-			else
-				table.insert(servers, ele.name)
-			end
-		end
-
-		for _, value in pairs(servers) do
-			local status, config = pcall(require, "lsp.config." .. value)
-			if not status then
-				config = {}
-			end
-			servers_handlers[value] = function()
-				lspconfig[value].setup(vim.tbl_deep_extend("force", default_config, config))
-			end
-		end
-
-		lspconfig.dartls.setup(dart_config)
-
+		-- setup mason main pakcage
 		mason.setup(masonConfig)
 
+		-- setup mason lsp
 		mason_lsp.setup({
-			ensure_installed = installServers,
+			ensure_installed = { 'ast_grep', 'eslint', 'ts_ls', 'tailwindcss', 'prismals' },
 		})
 
-		mason_lsp.setup_handlers(servers_handlers)
+		-- TODO
+		-- 暂时不起作用
+		lspconfig.ast_grep.setup{
+			cmd = { 'ast-grep', 'lsp' },
+			filetypes = { 'c', 'cpp', 'rust', 'go', 'java', 'python', 'javascript', 'typescript', 'html', 'css', 'kotlin', 'dart', 'lua' },
+			root_dir = lspconfig.util.root_pattern('sgconfig.yml', 'sgconfig.yaml'),
+			settings = {
+				astGrep = {
+					parser = {
+						tsx = { 'typescript', 'typescriptreact' },
+					},
+				},
+			}
+		}
 
-		for _, ele in pairs(alones) do
-			require("lsp.config." .. ele)
-		end
+		lspconfig.dartls.setup{
+			default_config = {
+				cmd = { 'dart', 'language-server', '--protocol=lsp' },
+				filetypes = { 'dart' },
+				root_dir = lspconfig.util.root_pattern 'pubspec.yaml',
+				init_options = {
+					onlyAnalyzeProjectsWithOpenFiles = true,
+					suggestFromUnimportedLibraries = true,
+					closingLabels = true,
+					outline = true,
+					flutterOutline = true,
+				},
+				settings = {
+					dart = {
+						completeFunctionCalls = true,
+						showTodos = true,
+					},
+				},
+			},
+			docs = {
+				description = [[
+					https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server/tool/lsp_spec
+
+					Language server for dart.
+				]],
+				default_config = {
+					root_dir = [[root_pattern("pubspec.yaml")]],
+				},
+			},
+			on_attach = attach
+		}
+
+		lspconfig.ts_ls.setup{
+			on_attach = attach
+		}
+
+		lspconfig.eslint.setup{
+			on_attach = attach
+		}
+
+		lspconfig.tailwindcss.setup{
+			on_attach = attach
+		}
+
+		lspconfig.prismals.setup{
+			on_attach = attach
+		}
 
 		require('lsp.ui')
-		require('lsp.null_ls')
 	end,
 
 	dependencies = {
+		'neovim/nvim-lspconfig',
 		'williamboman/mason-lspconfig.nvim',
-		'jose-elias-alvarez/null-ls.nvim',
-		'jay-babu/mason-null-ls.nvim',
-		'neovim/nvim-lspconfig'
 	}
 }
 

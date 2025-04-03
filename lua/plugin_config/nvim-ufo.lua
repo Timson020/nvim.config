@@ -43,10 +43,8 @@ local config = {
 	enable_get_fold_virt_text = true,
 	open_fold_hl_timeout = 150,
 	fold_virt_text_handler = handler,
-	close_fold_kinds_for_ft = {'imports', 'comment'},
     preview = {
       win_config = {
-        -- border = {'', '─', '', '', '', '─', '', ''},
         winhighlight = 'Normal:Folded',
         winblend = 0
       },
